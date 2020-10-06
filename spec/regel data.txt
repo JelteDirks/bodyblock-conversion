@@ -1,0 +1,13 @@
+Regel object:
+  Regelnummer
+  Regel template    vervang caret met positienummer in de originele template (haal positie uit originele template!)
+  Omschrijving
+  Positie[]:
+    Type
+    Nummer
+    Labelnummer?
+    Instellingen[]:
+      Uitlijnen
+      Weergave
+      Verwijderen
+      Uit Watchbestand
