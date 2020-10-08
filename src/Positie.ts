@@ -1,4 +1,4 @@
-import {Instellingen} from "./Instellingen";
+import {Instellingen} from "./ANVAInstellingen";
 
 export class Positie {
     public type: string = '';
