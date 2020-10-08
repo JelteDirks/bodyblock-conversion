@@ -6,7 +6,7 @@ Regel object:
     Type
     Nummer
     Labelnummer?
-    Instellingen[]:
+    Instellingen:
       Uitlijnen
       Weergave
       Verwijderen
