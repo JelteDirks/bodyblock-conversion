@@ -21,7 +21,7 @@ const regels: Regel[]= [];
         processLine(line, regels);
     }
 
-    console.log(regels.filter(e => !!e));
+    console.log(JSON.stringify(regels.filter(e => !!e), null, 4));
 })();
 
 
