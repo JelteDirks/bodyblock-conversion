@@ -1,7 +1,7 @@
 export const anvaInstellingen: ANVAInstellingen[] = [
     {
         title: 'Uitlijnen',
-        value: /^\s*Uitlijnen\s([a-zA-Z])/,
+        value: /^\s*Uitlijnen\s([a-zA-Z]+)/,
         groups: [
             {
                 n: 1,

@@ -14,22 +14,16 @@ export class Regel {
         this.regelnummer = regelNummer;
     }
 
-    private getPositie(index: number): Positie {
-        for (let pos of this.posities) {
-            if (pos.nummer === index) return pos;
-        }
-
-        return new Positie();
+    private voegPositieToe(index: number): void {
+        this.posities.push(new Positie(index));
     }
 
-    private setPositie(index: number, pos: Positie): number {
-        for (let i = 0; i < this.posities.length; ++i) {
-            if (this.posities[i].nummer === index) {
-                this.posities[i] = pos;
-                return 1;
-            }
+    private getPositie(index: number): Positie {
+        if (!this.hasPositie(index)) {
+            this.voegPositieToe(index);
         }
-        return 0;
+
+        return this.posities[this.posities.length - 1];
     }
 
     private hasPositie(index: number): boolean {
@@ -49,17 +43,18 @@ export class Regel {
             this.omschrijving = this.regelTemplate.substr(
                 (this.regelInspringen + eerstePositieStart) - 1,
                 (positie - eerstePositieStart)
-            );
+            ).trim();
         }
 
+        if (!this.hasPositie(positie)) this.voegPositieToe(positie);
+
+        // zoek naar instellingen voor bijbehoredne positie
         for (let ai of anvaInstellingen) {
             const matcher = line.match(ai.value);
             if (!matcher) continue;
             ai.groups.forEach((g: GroepInstellingen) => {
-                const pos = this.getPositie(positie);
                 // @ts-ignore
-                pos.instellingen[g.t] = matcher[g.n];
-                this.setPositie(positie, pos);
+                this.getPositie(positie).instellingen[g.t] = matcher[g.n]
             });
         }
     }
