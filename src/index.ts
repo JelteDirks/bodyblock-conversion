@@ -4,7 +4,7 @@ import * as readline from "readline";
 import {processLine} from "./processLine";
 import {Regel} from "./Regel";
 
-const testfilepath = path.resolve('test/FML0200002');
+const testfilepath = path.resolve('test/test_fiddle');
 const regels: Regel[]= [];
 
 (async function () {
@@ -18,6 +18,7 @@ const regels: Regel[]= [];
     });
 
     for await (const line of rlInterface) {
+
         processLine(line, regels);
     }
 

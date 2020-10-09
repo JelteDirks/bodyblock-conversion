@@ -48,7 +48,7 @@ export class Regel {
 
         if (!this.hasPositie(positie)) this.voegPositieToe(positie);
 
-        // zoek naar instellingen voor bijbehoredne positie
+        // zoek naar instellingen voor bijbehorende positie
         for (let ai of anvaInstellingen) {
             const matcher = line.match(ai.value);
             if (!matcher) continue;

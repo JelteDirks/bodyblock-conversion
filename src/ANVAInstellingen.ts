@@ -20,6 +20,16 @@ export const anvaInstellingen: ANVAInstellingen[] = [
         ]
     },
     {
+        title: 'Label',
+        value: /^Regel\s+([0-9]+)\s+Positie\s+([0-9]*)\s+Label\s([0-9]{5}).*/,
+        groups: [
+            {
+                n: 3,
+                t: 'labelnummer'
+            }
+        ]
+    },
+    {
         title: 'Weergave',
         value: /\s+Weergave:\s(\w*)/,
         groups: [
