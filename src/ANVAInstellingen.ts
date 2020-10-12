@@ -31,7 +31,7 @@ export const anvaInstellingen: ANVAInstellingen[] = [
     },
     {
         title: 'Weergave',
-        value: /\s+Weergave:\s(\w*)/,
+        value: /\s+Weergave:\s(.*)/,
         groups: [
             {
                 n: 1,

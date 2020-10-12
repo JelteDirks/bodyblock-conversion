@@ -1,5 +1,6 @@
 import {Positie} from "./Positie";
 import {anvaInstellingen, GroepInstellingen} from "./ANVAInstellingen";
+import {translateCharacters} from "./translateCharacters";
 
 export class Regel {
     public regelnummer: number;
@@ -8,6 +9,7 @@ export class Regel {
     public inhoud: string = '';
     public posities: Positie[] = [];
     private offset: number;
+    private positiesSorted: boolean = false;
 
     constructor(regelTemplate: string, regelNummer: number, offset: number) {
         this.regelTemplate = regelTemplate;
@@ -35,7 +37,9 @@ export class Regel {
         return false;
     }
 
-    public setOmschrijving() {
+    private sortPosities() {
+        if (this.positiesSorted) return;
+
         this.posities.sort((a: Positie, b: Positie) => {
 
             if (a.nummer < b.nummer) return -1;
@@ -43,6 +47,26 @@ export class Regel {
 
             return 1;
         });
+
+        this.positiesSorted = true;
+    }
+
+    public setInhoud(): void {
+        this.sortPosities();
+
+        const second = this.posities[1];
+
+        if (!second) {
+            console.warn('only one position');
+            return;
+        }
+
+        this.inhoud = this.regelTemplate.substr(this.offset + second.nummer - 1);
+        this.inhoud = translateCharacters(this.inhoud);
+    }
+
+    public setOmschrijving() {
+        this.sortPosities();
 
         const first = this.posities[0]
         const second = this.posities[1];

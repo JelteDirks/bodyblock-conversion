@@ -32,6 +32,7 @@ let offset = -1;
 
     regels.forEach((r: Regel) => {
         r.setOmschrijving();
+        r.setInhoud();
     });
 
     console.log(JSON.stringify(regels.filter(e => !!e), null, 4));
