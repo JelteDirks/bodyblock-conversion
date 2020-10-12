@@ -4,7 +4,7 @@ import * as readline from "readline";
 import {processLine} from "./processLine";
 import {Regel} from "./Regel";
 
-const testfilepath = path.resolve('test/test_fiddle');
+const testfilepath = path.resolve('test/FML0200002');
 const regels: Regel[] = [];
 const counterLineRE = /[0-9]{15,}/;
 const startSpace = /^\s*/;
