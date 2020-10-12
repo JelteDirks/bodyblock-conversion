@@ -12,6 +12,7 @@ export function processLine(line: string, regels: Regel[], offset: number) {
         const groups = line.match(regelRE);
         if (!groups) throw 'no group found while matching regel';
         regels[Number(groups[1])] = new Regel(line, Number(groups[1]), offset);
+        return;
     }
 
     // zoek uit in welke regel en op welke positie de huidige line.

@@ -30,6 +30,10 @@ let offset = -1;
         processLine(line, regels, offset);
     }
 
+    regels.forEach((r: Regel) => {
+        r.setOmschrijving();
+    });
+
     console.log(JSON.stringify(regels.filter(e => !!e), null, 4));
 })();
 

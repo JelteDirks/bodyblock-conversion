@@ -35,18 +35,32 @@ export class Regel {
         return false;
     }
 
-    public processSettings(line: string, regel: number, positie: number): void {
-        if (regel !== this.regelnummer) throw 'regelnummer and regel should match';
+    public setOmschrijving() {
+        this.posities.sort((a: Positie, b: Positie) => {
 
-        // tweede positie op deze regel, omschrijving lengte is bekend
-        if (this.posities.length === 1) {
-            const eerstePositieStart = this.posities[0].nummer;
-            this.omschrijving = this.regelTemplate.substr(
-                (this.offset + eerstePositieStart) - 1,
-                (positie - eerstePositieStart)
-            ).trim();
+            if (a.nummer < b.nummer) return -1;
+            if (a.nummer === b.nummer) return 0;
+
+            return 1;
+        });
+
+        const first = this.posities[0]
+        const second = this.posities[1];
+
+        if (!first || !second) {
+            console.warn('problem setting omschrijving - first position:', first, 'second position:', second);
+            return;
         }
 
+        const eerstePositieStart = first.nummer;
+        this.omschrijving = this.regelTemplate.substr(
+            (this.offset + eerstePositieStart) - 1,
+            (second.nummer - eerstePositieStart)
+        ).trim();
+    }
+
+    public processSettings(line: string, regel: number, positie: number): void {
+        if (regel !== this.regelnummer) throw 'regelnummer and regel should match';
         if (!this.hasPositie(positie)) this.voegPositieToe(positie);
 
         // zoek naar instellingen voor bijbehorende positie
