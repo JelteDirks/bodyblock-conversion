@@ -38,6 +38,16 @@ export const anvaInstellingen: ANVAInstellingen[] = [
                 t: 'weergave'
             }
         ]
+    },
+    {
+        title: 'Regel verwijderen',
+        value: /\s+Regel\s((niet\s)?verwijderen)\sindien\slabel\sniet\sgevuld.*/,
+        groups: [
+            {
+                n: 1,
+                t: 'verwijderen'
+            }
+        ]
     }
 ];
 
