@@ -4,14 +4,14 @@ let huidigeRegel: number = -1;
 let huidigePositie: number = -1;
 let huidigRegelObject: Regel;
 
-export function processLine(line: string, regels: Regel[]) {
+export function processLine(line: string, regels: Regel[], offset: number) {
 
     // regex voor de initiële regels op te slaan
     const regelRE = /^([0-9]{2})\s.+/;
     if (regelRE.test(line)) {
         const groups = line.match(regelRE);
         if (!groups) throw 'no group found while matching regel';
-        regels[Number(groups[1])] = new Regel(line, Number(groups[1]));
+        regels[Number(groups[1])] = new Regel(line, Number(groups[1]), offset);
     }
 
     // zoek uit in welke regel en op welke positie de huidige line.

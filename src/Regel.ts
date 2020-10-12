@@ -7,11 +7,12 @@ export class Regel {
     public omschrijving: string = '';
     public inhoud: string = '';
     public posities: Positie[] = [];
-    private regelInspringen = 3;
+    private offset: number;
 
-    constructor(regelTemplate: string, regelNummer: number) {
+    constructor(regelTemplate: string, regelNummer: number, offset: number) {
         this.regelTemplate = regelTemplate;
         this.regelnummer = regelNummer;
+        this.offset = offset;
     }
 
     private voegPositieToe(index: number): void {
@@ -41,7 +42,7 @@ export class Regel {
         if (this.posities.length === 1) {
             const eerstePositieStart = this.posities[0].nummer;
             this.omschrijving = this.regelTemplate.substr(
-                (this.regelInspringen + eerstePositieStart) - 1,
+                (this.offset + eerstePositieStart) - 1,
                 (positie - eerstePositieStart)
             ).trim();
         }
