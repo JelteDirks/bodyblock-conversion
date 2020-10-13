@@ -1,5 +1,5 @@
 import path from "path";
-import {WorkBook} from "xlsx";
+import {CellObject, WorkBook, WorkSheet} from "xlsx";
 import {Polis} from "./Polis";
 import {getNextColumnKey} from "./getNextColumnKey";
 
@@ -9,31 +9,18 @@ export class ExcelController {
 
     private readonly workbook: WorkBook;
     private static defaultHeaders: { [key: string]: any } = {
-        A1: 'Omschrijving',
-        B1: 'Inhoud',
-        C1: 'Weergave',
-        D1: 'Uitlijnen',
-        E1: 'Regel verwijderen',
-        F1: 'Regel template'
+        A1: 'omschrijving',
+        B1: 'inhoud',
+        C1: 'weergave',
+        D1: 'uitlijnen',
+        E1: 'regel verwijderen',
+        F1: 'regel template'
     }
+    private headers: { [key: string]: any } = {};
     private maatschappijColumn: string = '';
     private maxRow: number = -1;
     private maxColumn: string = '';
     private polis: Polis;
-
-    private getHeadersAsArray(): string[] {
-        return Object.keys(ExcelController.defaultHeaders).map((e: string) => {
-            return ExcelController.defaultHeaders[e]
-        });
-    }
-
-    private findKeyForHeader(name: string) {
-        for (let x in ExcelController.defaultHeaders) {
-            if (ExcelController.defaultHeaders[x] === name) {
-                return x;
-            }
-        }
-    }
 
     constructor(file: string, polis: Polis) {
 
@@ -50,10 +37,44 @@ export class ExcelController {
         this.setMaxRow();
         this.setMaxColumn()
         this.setMaatschappijColumn();
+        this.fillHeaders();
     }
 
-    private getSheet() {
+    private fillHeaders() {
+        this.headers = {...ExcelController.defaultHeaders};
+        let col = 'A';
+
+        while (col !== getNextColumnKey(this.maxColumn)) {
+            const cell = this.getCellValueByRowCol(1, col);
+            if (!cell) continue;
+            this.headers[`${col}1`] = String.prototype.toLowerCase.call(cell.v);
+            col = getNextColumnKey(col);
+        }
+    }
+
+    private getHeadersAsArray(): string[] {
+        return Object.keys(ExcelController.defaultHeaders).map((e: string) => {
+            return ExcelController.defaultHeaders[e].toLowerCase();
+        });
+    }
+
+    private findKeyForHeader(name: string): string {
+        for (let x in this.headers) {
+            if (this.headers[x] === name) {
+                return x.replace(/[0-9]/g, '');
+            }
+        }
+        throw 'no key for header found';
+    }
+
+    private getSheet(): WorkSheet {
         return this.workbook.Sheets[this.polis.branche]
+    }
+
+
+    private getCellValueByRowCol(row: string | number, column: string): CellObject | undefined {
+        const sheet = this.getSheet();
+        return sheet[`${column}${row}`];
     }
 
     private setMaatschappijColumn(): void {
@@ -112,9 +133,10 @@ export class ExcelController {
         this.maxColumn = matcher[1];
     }
 
-    public loopExistingLabels() {
-        for (let r = 0; r <= this.maxRow; ++r) {
-            console.log(this.getSheet()[`${this.findKeyForHeader('Omschrijving')}1`]);
+    public loopExistingLabels(): void {
+        for (let r = 1; r <= this.maxRow; ++r) {
+            const cell = this.getCellValueByRowCol(r, this.findKeyForHeader('omschrijving'));
+            console.log(cell?.v);
         }
     }
 
