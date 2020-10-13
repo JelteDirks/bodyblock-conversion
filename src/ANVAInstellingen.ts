@@ -62,7 +62,7 @@ export interface GroepInstellingen {
     t: 'uitlijnen' | 'weergave' | 'verwijderen' | 'uitWacht' | 'labelnummer'; // group title
 }
 
-export interface Instellingen {
+export interface Instellingen extends Object {
     uitlijnen?: 'Links' | 'Rechts';
     weergave?: 'Omschrijving' | 'Code';
     verwijderen?: 'niet verwijderen' | 'verwijderen';

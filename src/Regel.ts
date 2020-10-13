@@ -37,7 +37,7 @@ export class Regel {
         return false;
     }
 
-    private sortPosities() {
+    private sortPosities(): void {
         if (this.positiesSorted) return;
 
         this.posities.sort((a: Positie, b: Positie) => {
@@ -49,6 +49,14 @@ export class Regel {
         });
 
         this.positiesSorted = true;
+    }
+
+    public setInhoudLabels(): void {
+        this.sortPosities();
+        this.posities.forEach((pos: Positie) => {
+            if (!pos.instellingen.hasOwnProperty('labelnummer')) return;
+            this.inhoud = this.inhoud.replace('^', <string>pos.instellingen.labelnummer);
+        });
     }
 
     public setInhoud(): void {
@@ -65,7 +73,7 @@ export class Regel {
         this.inhoud = translateCharacters(this.inhoud);
     }
 
-    public setOmschrijving() {
+    public setOmschrijving(): void {
         this.sortPosities();
 
         const first = this.posities[0]
