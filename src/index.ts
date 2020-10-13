@@ -4,8 +4,9 @@ import * as readline from "readline";
 import {processLine} from "./processLine";
 import {Regel} from "./Regel";
 import {Polis} from "./Polis";
+import {ExcelController} from "./ExcelController";
 
-const testfilepath = path.resolve('test/FML0200004');
+const testfilepath = path.resolve('test/FML0200021');
 const polis = new Polis();
 const counterLineRE = /[0-9]{15,}/;
 const bouwsteenLine = /^Bouwsteen\s*.*\s*:\s*/;
@@ -48,7 +49,9 @@ let offset = -1;
         r.setInhoudLabels();
     });
 
-    console.log(JSON.stringify(polis, null, 4));
+    const excelController = new ExcelController('test/hb6000.xlsx', polis);
+
+    excelController.save();
 })();
 
 
