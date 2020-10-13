@@ -10,6 +10,7 @@ export class Regel {
     public posities: Positie[] = [];
     private offset: number;
     private positiesSorted: boolean = false;
+    private exceptionHandled: boolean = false;
 
     constructor(regelTemplate: string, regelNummer: number, offset: number) {
         this.regelTemplate = regelTemplate;
@@ -51,8 +52,40 @@ export class Regel {
         this.positiesSorted = true;
     }
 
-    public setInhoudLabels(): void {
+    private handleExceptions(): boolean {
+        if (this.exceptionHandled) return true;
+
         this.sortPosities();
+
+        /**
+         * exceptions are caught before processing regular labels
+         */
+        if (/[0-9]{2}(\s|\^)*$/.test(this.regelTemplate)) {
+
+            this.omschrijving = 'n/a';
+
+            this.posities.forEach((pos: Positie) => {
+                if (pos.instellingen.labelnummer) {
+                    this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
+                }
+                this.inhoud = this.regelTemplate.replace(/\b[0-9]{2}\b/, '').trim();
+            });
+
+            this.exceptionHandled = true;
+            return true;
+        }
+
+        return false;
+    }
+
+    public setInhoudLabels(): void {
+
+        if (this.handleExceptions()) {
+            return;
+        }
+
+        this.sortPosities();
+
         this.posities.forEach((pos: Positie) => {
             if (!pos.instellingen.hasOwnProperty('labelnummer')) return;
             this.inhoud = this.inhoud.replace('^', <string>pos.instellingen.labelnummer);
@@ -60,6 +93,11 @@ export class Regel {
     }
 
     public setInhoud(): void {
+
+        if (this.handleExceptions()) {
+            return;
+        }
+
         this.sortPosities();
 
         const second = this.posities[1];
@@ -74,6 +112,11 @@ export class Regel {
     }
 
     public setOmschrijving(): void {
+
+        if (this.handleExceptions()) {
+            return;
+        }
+
         this.sortPosities();
 
         const first = this.posities[0]
@@ -89,6 +132,23 @@ export class Regel {
             (this.offset + eerstePositieStart) - 1,
             (second.nummer - eerstePositieStart)
         ).trim();
+    }
+
+    public setTemplateLabels(): void {
+
+        if (this.handleExceptions()) {
+            return;
+        }
+
+        this.sortPosities();
+
+        this.posities.forEach((pos: Positie) => {
+            if (pos.instellingen.labelnummer) {
+                this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
+            }
+        });
+
+        this.regelTemplate = translateCharacters(this.regelTemplate);
     }
 
     public processSettings(line: string, regel: number, positie: number): void {

@@ -47,11 +47,14 @@ let offset = -1;
         r.setOmschrijving();
         r.setInhoud();
         r.setInhoudLabels();
+        r.setTemplateLabels();
     });
 
     const excelController = new ExcelController('test/hb6000.xlsx', polis);
 
     excelController.save();
+
+    console.log(JSON.stringify(polis.regels.filter(e => !!e), null, 2));
 })();
 
 
