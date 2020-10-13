@@ -2,6 +2,8 @@ import path from "path";
 import {CellObject, WorkBook, WorkSheet} from "xlsx";
 import {Polis} from "./Polis";
 import {getNextColumnKey} from "./getNextColumnKey";
+import {Regel} from "./Regel";
+import {toLowerCase} from "./toLowerCase";
 
 const xlsx = require('xlsx');
 
@@ -134,8 +136,22 @@ export class ExcelController {
 
     public loopExistingLabels(): void {
         for (let r = 1; r <= this.maxRow; ++r) {
-            const cell = this.getCellValueByRowCol(r, this.findKeyForHeader('omschrijving'));
-            console.log(cell?.v);
+            const omschrijvingCell = this.getCellValueByRowCol(r, this.findKeyForHeader('omschrijving'));
+            const inhoudCell = this.getCellValueByRowCol(r, this.findKeyForHeader('inhoud'));
+
+            const omschrijving: string | undefined = <string | undefined>omschrijvingCell?.v;
+            const inhoud: string | undefined = <string | undefined>inhoudCell?.v;
+
+            if (!omschrijving || !inhoud) continue;
+
+            this.polis.regels.forEach((regel: Regel) => {
+                if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
+                    && (toLowerCase(inhoud) === toLowerCase(regel.inhoud))) {
+                    this.getSheet()[`${this.maatschappijColumn}${r}`] = 'x';
+                }
+            });
+
+            console.log(omschrijvingCell?.v);
         }
     }
 
