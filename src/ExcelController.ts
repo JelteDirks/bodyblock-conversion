@@ -7,7 +7,7 @@ const xlsx = require('xlsx');
 
 export class ExcelController {
 
-    private workbook: WorkBook;
+    private readonly workbook: WorkBook;
     private static defaultHeaders = {
         A1: 'Omschrijving',
         B1: 'Inhoud',
@@ -33,8 +33,7 @@ export class ExcelController {
         this.polis = polis;
         this.setMaxRow();
         this.setMaxColumn()
-        this.
-        setMaatschappijColumn();
+        this.setMaatschappijColumn();
     }
 
     private getSheet() {
