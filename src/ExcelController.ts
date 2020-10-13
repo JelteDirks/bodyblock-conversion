@@ -54,6 +54,8 @@ export class ExcelController {
 
             currentKey = getNextColumnKey(currentKey);
         }
+
+        this.maatschappijColumn = getNextColumnKey(this.maxColumn);
     }
 
     private setMaxRow(): void {
