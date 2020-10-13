@@ -34,6 +34,10 @@ export class ExcelController {
         this.setMaxColumn();
     }
 
+    private setMaatschappijColumn(): void {
+
+    }
+
     private setMaxRow(): void {
         const sheet = this.workbook.Sheets[this.polis.branche];
         const ref = sheet['!ref'];
@@ -73,6 +77,6 @@ export class ExcelController {
     }
 
     public save(): void {
-        xlsx.writeFile(this.workbook, path.resolve('test/new.xlsx'));
+        xlsx.writeFile(this.workbook, path.resolve('test/static/new.xlsx'));
     }
 }
