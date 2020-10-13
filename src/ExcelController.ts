@@ -71,7 +71,6 @@ export class ExcelController {
         return this.workbook.Sheets[this.polis.branche]
     }
 
-
     private getCellValueByRowCol(row: string | number, column: string): CellObject | undefined {
         const sheet = this.getSheet();
         return sheet[`${column}${row}`];
