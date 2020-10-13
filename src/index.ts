@@ -6,7 +6,7 @@ import {Regel} from "./Regel";
 import {Polis} from "./Polis";
 import {ExcelController} from "./ExcelController";
 
-const testfilepath = path.resolve('test/FML0200021');
+const testfilepath = path.resolve('test/test_fiddle');
 const polis = new Polis();
 const counterLineRE = /[0-9]{15,}/;
 const bouwsteenLine = /^Bouwsteen\s*.*\s*:\s*/;
