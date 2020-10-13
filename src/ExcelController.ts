@@ -1,6 +1,7 @@
 import path from "path";
 import {WorkBook} from "xlsx";
 import {Polis} from "./Polis";
+import {getNextColumnKey} from "./getNextColumnKey";
 
 const xlsx = require('xlsx');
 
@@ -31,15 +32,33 @@ export class ExcelController {
 
         this.polis = polis;
         this.setMaxRow();
-        this.setMaxColumn();
+        this.setMaxColumn()
+        this.
+        setMaatschappijColumn();
+    }
+
+    private getSheet() {
+        return this.workbook.Sheets[this.polis.branche]
     }
 
     private setMaatschappijColumn(): void {
+        let currentKey = 'A';
+        const sheet = this.getSheet();
 
+        while (currentKey !== this.maxColumn) {
+            const value = sheet[`${currentKey}1`].v;
+
+            if (value === this.polis.maatschappij) {
+                this.maatschappijColumn = currentKey;
+                return;
+            }
+
+            currentKey = getNextColumnKey(currentKey);
+        }
     }
 
     private setMaxRow(): void {
-        const sheet = this.workbook.Sheets[this.polis.branche];
+        const sheet = this.getSheet();
         const ref = sheet['!ref'];
 
         // no ref means empty sheet
@@ -58,7 +77,7 @@ export class ExcelController {
     }
 
     private setMaxColumn(): void {
-        const sheet = this.workbook.Sheets[this.polis.branche];
+        const sheet = this.getSheet();
         const ref = sheet['!ref'];
 
         // no ref means empty sheet
@@ -77,6 +96,6 @@ export class ExcelController {
     }
 
     public save(): void {
-        xlsx.writeFile(this.workbook, path.resolve('test/static/new.xlsx'));
+        xlsx.writeFile(this.workbook, path.resolve('static/new.xlsx'));
     }
 }

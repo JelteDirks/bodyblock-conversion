@@ -6,7 +6,7 @@ import {Regel} from "./Regel";
 import {Polis} from "./Polis";
 import {ExcelController} from "./ExcelController";
 
-const testfilepath = path.resolve('test/static/test_fiddle');
+const testfilepath = path.resolve('static/test_fiddle');
 const polis = new Polis();
 const counterLineRE = /[0-9]{15,}/;
 const bouwsteenLine = /^Bouwsteen\s*.*\s*:\s*/;
@@ -50,8 +50,7 @@ let offset = -1;
         r.setTemplateLabels();
     });
 
-    const excelController = new ExcelController('test/static/hb6000.xlsx', polis);
-
+    const excelController = new ExcelController('static/hb6000.xlsx', polis);
 
 
     excelController.save();
