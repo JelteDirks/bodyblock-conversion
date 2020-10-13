@@ -8,7 +8,7 @@ const xlsx = require('xlsx');
 export class ExcelController {
 
     private readonly workbook: WorkBook;
-    private static defaultHeaders = {
+    private static defaultHeaders: { [key: string]: any } = {
         A1: 'Omschrijving',
         B1: 'Inhoud',
         C1: 'Weergave',
@@ -21,13 +21,29 @@ export class ExcelController {
     private maxColumn: string = '';
     private polis: Polis;
 
+    private getHeadersAsArray(): string[] {
+        return Object.keys(ExcelController.defaultHeaders).map((e: string) => {
+            return ExcelController.defaultHeaders[e]
+        });
+    }
+
+    private findKeyForHeader(name: string) {
+        for (let x in ExcelController.defaultHeaders) {
+            if (ExcelController.defaultHeaders[x] === name) {
+                return x;
+            }
+        }
+    }
+
     constructor(file: string, polis: Polis) {
 
         this.workbook = xlsx.readFile(path.resolve(file));
         const sheets = this.workbook.Sheets;
 
         if (!sheets.hasOwnProperty(polis.branche)) {
-            xlsx.utils.book_append_sheet(this.workbook, xlsx.utils.aoa_to_sheet([]), polis.branche);
+            xlsx.utils.book_append_sheet(this.workbook, xlsx.utils.aoa_to_sheet([
+                this.getHeadersAsArray()
+            ]), polis.branche);
         }
 
         this.polis = polis;
@@ -68,7 +84,7 @@ export class ExcelController {
             return
         }
 
-        const matcher = ref?.match(/^[A-Z]+[0-9]+:[A-Z]+([0-9]+)$/);
+        const matcher = ref.match(/^[A-Z]+[0-9]+:[A-Z]+([0-9]+)$/);
 
         if (matcher === null) {
             throw 'ref could not be matched for max row';
@@ -94,6 +110,12 @@ export class ExcelController {
         }
 
         this.maxColumn = matcher[1];
+    }
+
+    public loopExistingLabels() {
+        for (let r = 0; r <= this.maxRow; ++r) {
+            console.log(this.getSheet()[`${this.findKeyForHeader('Omschrijving')}1`]);
+        }
     }
 
     public save(): void {

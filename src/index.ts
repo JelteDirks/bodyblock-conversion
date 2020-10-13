@@ -52,9 +52,8 @@ let offset = -1;
 
     const excelController = new ExcelController('static/hb6000.xlsx', polis);
 
-
+    excelController.loopExistingLabels();
     excelController.save();
-    console.log(JSON.stringify(polis.regels.filter(e => !!e), null, 2));
 })();
 
 
