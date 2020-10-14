@@ -114,6 +114,8 @@ export class ExcelController {
         }
 
         this.maatschappijColumn = getNextColumnKey(this.maxColumn);
+        this.getSheet()["!ref"] = `A1:${this.maatschappijColumn}${this.maxRow}`;
+        this.setCell(`${this.maatschappijColumn}1`, this.polis.maatschappij);
     }
 
     private setMaxRow(): void {
