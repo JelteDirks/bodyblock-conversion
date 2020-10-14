@@ -42,6 +42,25 @@ export class ExcelController {
         this.fillHeaders();
     }
 
+    private setCell(key: string, value: any) {
+
+        if (this.cellExists(key)) {
+            this.getCell(key).v = value;
+            return
+        }
+
+        this.workbook.Sheets[this.polis.branche][key] = {};
+        this.getCell(key).v = value;
+    }
+
+    private getCell(key: string): CellObject {
+        return this.getSheet()[key];
+    }
+
+    private cellExists(key: string): boolean {
+        return !!this.getCell(key);
+    }
+
     private fillHeaders() {
         this.headers = {...ExcelController.defaultHeaders};
         let col = 'A';
@@ -139,7 +158,6 @@ export class ExcelController {
             const maatschappijKey = `${this.maatschappijColumn}${r}`
             const omschrijvingCell = this.getCellValueByRowCol(r, this.findKeyForHeader('omschrijving'));
             const inhoudCell = this.getCellValueByRowCol(r, this.findKeyForHeader('inhoud'));
-            let maatschappijCell = this.getSheet()[maatschappijKey];
 
             const omschrijving: string | undefined = <string | undefined>omschrijvingCell?.v;
             const inhoud: string | undefined = <string | undefined>inhoudCell?.v;
@@ -149,8 +167,7 @@ export class ExcelController {
             this.polis.regels.forEach((regel: Regel) => {
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
                     && (toLowerCase(inhoud) === toLowerCase(regel.inhoud))) {
-                    xlsx.utils.format_cell(this.workbook.Sheets[this.polis.branche][maatschappijKey], 'x');
-                    console.log(this.getSheet()[maatschappijKey])
+                    this.setCell(maatschappijKey, 'x');
                 }
             });
         }
