@@ -23,6 +23,7 @@ export class ExcelController {
     private maxRow: number = -1;
     private maxColumn: string = '';
     private polis: Polis;
+    private newRegelQ: Regel[] = [];
 
     constructor(file: string, polis: Polis) {
 
@@ -168,6 +169,8 @@ export class ExcelController {
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
                     && (toLowerCase(inhoud) === toLowerCase(regel.inhoud))) {
                     this.setCell(maatschappijKey, 'x');
+                } else {
+                    this.newRegelQ.push(regel);
                 }
             });
         }
