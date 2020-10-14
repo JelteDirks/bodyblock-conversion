@@ -82,7 +82,7 @@ export class ExcelController {
         let currentKey = 'A';
         const sheet = this.getSheet();
 
-        while (currentKey !== this.maxColumn) {
+        while (currentKey !== getNextColumnKey(this.maxColumn)) {
             const value = sheet[`${currentKey}1`].v;
 
             if (value === this.polis.maatschappij) {
@@ -136,8 +136,10 @@ export class ExcelController {
 
     public loopExistingLabels(): void {
         for (let r = 1; r <= this.maxRow; ++r) {
+            const maatschappijKey = `${this.maatschappijColumn}${r}`
             const omschrijvingCell = this.getCellValueByRowCol(r, this.findKeyForHeader('omschrijving'));
             const inhoudCell = this.getCellValueByRowCol(r, this.findKeyForHeader('inhoud'));
+            let maatschappijCell = this.getSheet()[maatschappijKey];
 
             const omschrijving: string | undefined = <string | undefined>omschrijvingCell?.v;
             const inhoud: string | undefined = <string | undefined>inhoudCell?.v;
@@ -147,11 +149,10 @@ export class ExcelController {
             this.polis.regels.forEach((regel: Regel) => {
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
                     && (toLowerCase(inhoud) === toLowerCase(regel.inhoud))) {
-                    this.getSheet()[`${this.maatschappijColumn}${r}`] = 'x';
+                    xlsx.utils.format_cell(this.workbook.Sheets[this.polis.branche][maatschappijKey], 'x');
+                    console.log(this.getSheet()[maatschappijKey])
                 }
             });
-
-            console.log(omschrijvingCell?.v);
         }
     }
 
