@@ -53,6 +53,7 @@ let offset = -1;
     const excelController = new ExcelController('static/hb6000.xlsx', polis);
 
     excelController.loopExistingLabels();
+    excelController.addLabelsFromQ();
     excelController.save();
 })();
 

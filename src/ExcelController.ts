@@ -114,8 +114,22 @@ export class ExcelController {
         }
 
         this.maatschappijColumn = getNextColumnKey(this.maxColumn);
-        this.getSheet()["!ref"] = `A1:${this.maatschappijColumn}${this.maxRow}`;
+        this.increaseColumnRange();
         this.setCell(`${this.maatschappijColumn}1`, this.polis.maatschappij);
+    }
+
+    private increaseRowRange() {
+    }
+
+    private increaseColumnRange() {
+        const match = this.getSheet()["!ref"]?.match(/^[A-Z]+[0-9]+:([A-Z]+)[0-9]+$/);
+        if (!match) throw 'no match found for !ref';
+        const ref = match[0];
+        const oldColumn = match[1];
+        const newColumn: number = xlsx.utils.decode_col(oldColumn) + 1;
+        const newRef = ref.replace(/:[A-Z]+/, ':' + xlsx.utils.encode_col(newColumn));
+        this.getSheet()["!ref"] = newRef;
+
     }
 
     private setMaxRow(): void {
@@ -176,6 +190,14 @@ export class ExcelController {
                 }
             });
         }
+    }
+
+    public addLabelsFromQ(): void {
+        this.newRegelQ.forEach((regel: Regel) => {
+            if (!regel) return;
+
+
+        });
     }
 
     public save(): void {
