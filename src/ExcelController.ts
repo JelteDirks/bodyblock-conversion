@@ -118,18 +118,22 @@ export class ExcelController {
         this.setCell(`${this.maatschappijColumn}1`, this.polis.maatschappij);
     }
 
-    private increaseRowRange() {
+    private increaseRowRange(n: number = 1) {
+        const match = this.getSheet()["!ref"]?.match(/^[A-Z]+[0-9]+:[A-Z]+([0-9]+)/);
+        if (!match) throw 'no match found for !ref';
+        const ref = match[0];
+        const oldRow = match[1];
+        const newRow: number = xlsx.utils.decode_row(oldRow) + n;
+        this.getSheet()["!ref"] = ref.replace(/[0-9]+$/, xlsx.utils.encode_row(newRow));
     }
 
-    private increaseColumnRange() {
+    private increaseColumnRange(n: number = 1) {
         const match = this.getSheet()["!ref"]?.match(/^[A-Z]+[0-9]+:([A-Z]+)[0-9]+$/);
         if (!match) throw 'no match found for !ref';
         const ref = match[0];
         const oldColumn = match[1];
-        const newColumn: number = xlsx.utils.decode_col(oldColumn) + 1;
-        const newRef = ref.replace(/:[A-Z]+/, ':' + xlsx.utils.encode_col(newColumn));
-        this.getSheet()["!ref"] = newRef;
-
+        const newColumn: number = xlsx.utils.decode_col(oldColumn) + n;
+        this.getSheet()["!ref"] = ref.replace(/:[A-Z]+/, `:${xlsx.utils.encode_col(newColumn)}`);
     }
 
     private setMaxRow(): void {
@@ -181,22 +185,26 @@ export class ExcelController {
 
             if (!omschrijving || !inhoud) continue;
 
-            this.polis.regels.forEach((regel: Regel) => {
+            // todo: fix loop to not add duplicate labels
+
+            for (let regel of this.polis.regels) {
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
                     && (toLowerCase(inhoud) === toLowerCase(regel.inhoud))) {
                     this.setCell(maatschappijKey, 'x');
                 } else {
                     this.newRegelQ.push(regel);
+                    break;
                 }
-            });
+            }
         }
     }
 
     public addLabelsFromQ(): void {
         this.newRegelQ.forEach((regel: Regel) => {
             if (!regel) return;
-
-
+            console.log(regel);
+            this.increaseRowRange();
+            this.setCell(xlsx.utils.encode_cell({r: ++this.maxRow, c: 1}), 'asd');
         });
     }
 
