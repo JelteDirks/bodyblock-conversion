@@ -8,6 +8,7 @@ export class Regel {
     public omschrijving: string = '';
     public inhoud: string = '';
     public posities: Positie[] = [];
+    public processed: boolean = false;
     private offset: number;
     private positiesSorted: boolean = false;
     private exceptionHandled: boolean = false;

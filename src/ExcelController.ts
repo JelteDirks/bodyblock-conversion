@@ -23,7 +23,6 @@ export class ExcelController {
     private maxRow: number = -1;
     private maxColumn: string = '';
     private polis: Polis;
-    private newRegelQ: Regel[] = [];
 
     constructor(file: string, polis: Polis) {
 
@@ -185,23 +184,21 @@ export class ExcelController {
 
             if (!omschrijving || !inhoud) continue;
 
-            // todo: fix loop to not add duplicate labels
-
             for (let regel of this.polis.regels) {
+                if (!regel) continue;
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
                     && (toLowerCase(inhoud) === toLowerCase(regel.inhoud))) {
                     this.setCell(maatschappijKey, 'x');
-                } else {
-                    this.newRegelQ.push(regel);
-                    break;
+                    regel.processed = true;
                 }
             }
         }
     }
 
     public addLabelsFromQ(): void {
-        this.newRegelQ.forEach((regel: Regel) => {
+        this.polis.regels.forEach((regel: Regel) => {
             if (!regel) return;
+            if (regel.processed) return;
             console.log(regel);
             this.increaseRowRange();
             this.setCell(xlsx.utils.encode_cell({r: ++this.maxRow, c: 1}), 'asd');
