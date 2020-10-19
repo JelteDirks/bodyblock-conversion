@@ -4,6 +4,7 @@ import {Polis} from "./Polis";
 import {getNextColumnKey} from "./getNextColumnKey";
 import {Regel} from "./Regel";
 import {toLowerCase} from "./toLowerCase";
+import {compareInhoud} from "./compareInhoud";
 
 const xlsx = require('xlsx');
 
@@ -187,7 +188,7 @@ export class ExcelController {
             for (let regel of this.polis.regels) {
                 if (!regel) continue;
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
-                    && (toLowerCase(inhoud) === toLowerCase(regel.inhoud))) {
+                    && compareInhoud(inhoud, regel.inhoud)) {
                     this.setCell(maatschappijKey, 'x');
                     regel.processed = true;
                 }
@@ -195,11 +196,11 @@ export class ExcelController {
         }
     }
 
-    public addLabelsFromQ(): void {
+    public addUnprocessedLabels(): void {
         this.polis.regels.forEach((regel: Regel) => {
             if (!regel) return;
             if (regel.processed) return;
-            console.log(regel);
+            console.log(JSON.stringify(regel, null, 2));
             this.increaseRowRange();
             this.setCell(xlsx.utils.encode_cell({r: ++this.maxRow, c: 1}), 'asd');
         });
