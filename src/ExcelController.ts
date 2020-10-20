@@ -98,19 +98,20 @@ export class ExcelController {
         return this.workbook.Sheets[this.polis.branche]
     }
 
-    // TODO: setting maatschappij column
     private setMaatschappijColumn(): void {
         let r = 0;
         let c = 0;
 
         while (this.maatschappijColumn === -1) {
-            const cellRef = xlsx.utils.encode_cell({r, c});
+            const cellRef: string = xlsx.utils.encode_cell({r, c});
             const cellObject: CellObject = this.getSheet()[cellRef];
 
-            if (!cellInRange(cellRef, xlsx.utils.decode_range(this.getSheet()["!ref"])) || cellObject.w === this.polis.maatschappij) {
+            if (!cellInRange({r, c}, xlsx.utils.decode_range(this.getSheet()["!ref"])) || cellObject.w === this.polis.maatschappij) {
                 this.maatschappijColumn = c;
                 this.increaseColumnRange(1);
             }
+
+            c++;
         }
     }
 
@@ -212,8 +213,7 @@ export class ExcelController {
         this.polis.regels.forEach((regel: Regel) => {
             if (!regel) return;
             if (regel.processed) return;
-            this.increaseRowRange();
-            this.setCellByKey(xlsx.utils.encode_cell({r: ++this.maxRow, c: 1}), 'asd');
+
             // TODO: make method for adding new row with label
         });
     }
