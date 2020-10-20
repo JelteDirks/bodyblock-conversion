@@ -58,6 +58,12 @@ export class Regel {
 
         this.sortPosities();
 
+        if (/^\d{2}\s*.*/.test(this.regelTemplate) && (this.posities.length === 1) && (Object.keys(this.posities[0].instellingen).length === 0)) {
+            this.inhoud = this.regelTemplate.replace(/^\d{2}\s?/, '').trim();
+            this.exceptionHandled = true;
+            return true;
+        }
+
         /**
          * exceptions are caught before processing regular labels
          */
