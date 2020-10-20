@@ -6,6 +6,7 @@ import {Regel} from "./Regel";
 import {toLowerCase} from "./toLowerCase";
 import {compareInhoud} from "./compareInhoud";
 import {cellInRange} from "./cellInRange";
+import {loopCellRange} from "./loopCellRange";
 
 const xlsx = require('xlsx');
 
@@ -20,10 +21,10 @@ export class ExcelController {
         E1: 'regel verwijderen',
         F1: 'regel template'
     }
-    private headers: { [key: string]: any } = {};
-    private maatschappijColumn: string = '';
-    private maxRow: number = -1;
-    private maxColumn: string = '';
+    private headers: { [key: string]: any } = {...ExcelController.defaultHeaders};
+    private maatschappijColumn: number = -1; // 0-index number for maatschappij column
+    private maxRow: number = -1; // 0-indexed number for max row in sheet
+    private maxColumn: number = -1; // 0-indexed number for max column in sheet
     private polis: Polis;
 
     constructor(file: string, polis: Polis) {
@@ -41,38 +42,41 @@ export class ExcelController {
         this.setMaxRow();
         this.setMaxColumn()
         this.setMaatschappijColumn();
-        this.fillHeaders();
     }
 
-    private setCell(key: string, value: any) {
+    private setCellByAddress(address: CellAddress, value: any) {
+        if (cellInRange(address, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
+            this.getCellByAddress(address).v = value;
+            return;
+        }
+
+        const newKey = xlsx.utils.encode_cell(address);
+        this.workbook.Sheets[this.polis.branche][newKey] = {};
+        this.getCellByAddress(address).v = value;
+    }
+
+    private setCellByKey(key: string, value: any) {
 
         if (this.cellExists(key)) {
-            this.getCell(key).v = value;
+            this.getCellByKey(key).v = value;
             return
         }
 
         this.workbook.Sheets[this.polis.branche][key] = {};
-        this.getCell(key).v = value;
+        this.getCellByKey(key).v = value;
     }
 
-    private getCell(key: string): CellObject {
+    private getCellByAddress(address: CellAddress) {
+        return this.getSheet()[xlsx.utils.encode_cell(address)];
+    }
+
+    private getCellByKey(key: string): CellObject {
         return this.getSheet()[key];
     }
 
-    private cellExists(key: string): boolean {
-        return !!this.getCell(key);
-    }
-
-    private fillHeaders() {
-        this.headers = {...ExcelController.defaultHeaders};
-        let col = 'A';
-
-        while (col !== getNextColumnKey(this.maxColumn)) {
-            const cell = this.getCellValueByRowCol(1, col);
-            if (!cell) continue;
-            this.headers[`${col}1`] = String.prototype.toLowerCase.call(cell.v);
-            col = getNextColumnKey(col);
-        }
+    private cellExists(key: string | CellAddress): boolean {
+        if (typeof key === 'string') return !!this.getCellByKey(key);
+        return !!this.getCellByAddress(key);
     }
 
     private getHeadersAsArray(): string[] {
@@ -94,105 +98,87 @@ export class ExcelController {
         return this.workbook.Sheets[this.polis.branche]
     }
 
-    private getCellValueByRowCol(row: string | number, column: string): CellObject | undefined {
-        const sheet = this.getSheet();
-        return sheet[`${column}${row}`];
-    }
-
+    // TODO: setting maatschappij column
     private setMaatschappijColumn(): void {
-        let currentKey = 'A';
-        const sheet = this.getSheet();
+        let r = 0;
+        let c = 0;
 
-        while (currentKey !== getNextColumnKey(this.maxColumn)) {
-            const value = sheet[`${currentKey}1`].v;
+        while (this.maatschappijColumn === -1) {
+            const cellRef = xlsx.utils.encode_cell({r, c});
+            const cellObject: CellObject = this.getSheet()[cellRef];
 
-            if (value === this.polis.maatschappij) {
-                this.maatschappijColumn = currentKey;
-                return;
+            if (!cellInRange(cellRef, xlsx.utils.decode_range(this.getSheet()["!ref"])) || cellObject.w === this.polis.maatschappij) {
+                this.maatschappijColumn = c;
+                this.increaseColumnRange(1);
             }
-
-            currentKey = getNextColumnKey(currentKey);
         }
-
-        this.maatschappijColumn = getNextColumnKey(this.maxColumn);
-        this.increaseColumnRange();
-        this.setCell(`${this.maatschappijColumn}1`, this.polis.maatschappij);
     }
 
     private increaseRowRange(n: number = 1) {
-        const match = this.getSheet()["!ref"]?.match(/^[A-Z]+[0-9]+:[A-Z]+([0-9]+)/);
-        if (!match) throw 'no match found for !ref';
-        const ref = match[0];
-        const oldRow = match[1];
-        const newRow: number = xlsx.utils.decode_row(oldRow) + n;
-        this.getSheet()["!ref"] = ref.replace(/[0-9]+$/, xlsx.utils.encode_row(newRow));
+        const range = xlsx.utils.decode_range(this.getSheet()["!ref"]);
+        range.e.r = range.e.r + n;
+        this.getSheet()["!ref"] = xlsx.utils.encode_range(range);
     }
 
     private increaseColumnRange(n: number = 1) {
-        const match = this.getSheet()["!ref"]?.match(/^[A-Z]+[0-9]+:([A-Z]+)[0-9]+$/);
-        if (!match) throw 'no match found for !ref';
-        const ref = match[0];
-        const oldColumn = match[1];
-        const newColumn: number = xlsx.utils.decode_col(oldColumn) + n;
-        this.getSheet()["!ref"] = ref.replace(/:[A-Z]+/, `:${xlsx.utils.encode_col(newColumn)}`);
+        const range = xlsx.utils.decode_range(this.getSheet()["!ref"]);
+        range.e.c = range.e.c + n;
+        this.getSheet()["!ref"] = xlsx.utils.encode_range(range);
     }
 
     private setMaxRow(): void {
-        const sheet = this.getSheet();
-        const ref = sheet['!ref'];
+        const sheetRef = this.getSheet()["!ref"];
 
-        // no ref means empty sheet
-        if (!ref) {
-            this.maxRow = 1;
-            return
+        if (!sheetRef) {
+            this.maxRow = xlsx.utils.decode_row('1');
+            return;
         }
 
-        const matcher = ref.match(/^[A-Z]+[0-9]+:[A-Z]+([0-9]+)$/);
+        const range = xlsx.utils.decode_range(sheetRef);
 
-        if (matcher === null) {
-            throw 'ref could not be matched for max row';
-        }
-
-        this.maxRow = Number(matcher[1]);
+        this.maxRow = range.e.r;
     }
 
     private setMaxColumn(): void {
-        const sheet = this.getSheet();
-        const ref = sheet['!ref'];
+        const sheetRef = this.getSheet()["!ref"];
 
         // no ref means empty sheet
-        if (!ref) {
-            this.maxColumn = 'F';
+        if (!sheetRef) {
+            this.maxColumn = xlsx.utils.decode_col('F');
             return
         }
 
-        const matcher = ref?.match(/^[A-Z]+[0-9]+:([A-Z]+)[0-9]+$/);
+        const range = xlsx.utils.decode_range(sheetRef);
 
-        if (matcher === null) {
-            throw 'ref could not be matched for max column';
-        }
-
-        this.maxColumn = matcher[1];
+        this.maxColumn = range.e.c;
     }
 
     public loopExistingLabels(): void {
-        for (let r = 1; r <= this.maxRow; ++r) {
-            const maatschappijKey = `${this.maatschappijColumn}${r}`
-            const omschrijvingCell = this.getCellValueByRowCol(r, this.findKeyForHeader('omschrijving'));
-            const inhoudCell = this.getCellValueByRowCol(r, this.findKeyForHeader('inhoud'));
+        for (let r = 0; r <= this.maxRow; ++r) {
+            const omschrijvingCell = this.getCellByAddress({
+                r,
+                c: xlsx.utils.decode_col(this.findKeyForHeader('omschrijving'))
+            });
+            const inhoudCell = this.getCellByAddress({
+                r,
+                c: xlsx.utils.decode_col(this.findKeyForHeader('inhoud'))
+            });
 
             const omschrijving: string | undefined = <string | undefined>omschrijvingCell?.v;
             const inhoud: string | undefined = <string | undefined>inhoudCell?.v;
 
             if (!omschrijving || !inhoud) continue;
 
-            console.log(omschrijving, this.identifyLabelRange(r));
-
             for (let regel of this.polis.regels) {
                 if (!regel) continue;
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
                     && compareInhoud(inhoud, regel.inhoud)) {
-                    this.setCell(maatschappijKey, 'x');
+                    const labelRange = this.identifyLabelRange(r);
+                    labelRange.s.c = this.maatschappijColumn;
+                    labelRange.e.c = this.maatschappijColumn;
+                    loopCellRange(labelRange, ((cellReference: string) => {
+                        this.setCellByKey(cellReference, 'x');
+                    }), this);
                     regel.processed = true;
                 }
             }
@@ -200,12 +186,12 @@ export class ExcelController {
     }
 
     public identifyLabelRange(r: number): Range {
-        const column = 'A';
+        const c: number = xlsx.utils.decode_col('A');
         let row = r;
         let value: string | undefined;
 
         while (!value) {
-            const cellAddress = {r: row, c: xlsx.utils.decode_col(column)};
+            const cellAddress = {r: row, c: c};
             const cellObject: CellObject = this.getSheet()[xlsx.utils.encode_cell(cellAddress)];
 
             if (!!cellObject) {
@@ -213,13 +199,13 @@ export class ExcelController {
             }
 
             if (!cellInRange(cellAddress, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
-                return {s: {c: xlsx.utils.decode_col(column), r}, e: {c: xlsx.utils.decode_col(column), r: row}};
+                return {s: {c, r}, e: {c, r: row}};
             }
 
             row = row + 1;
         }
 
-        return {s: {c: xlsx.utils.decode_col(column), r}, e: {c: xlsx.utils.decode_col(column), r: row - 1}};
+        return {s: {c, r}, e: {c, r: row - 1}};
     }
 
     public addUnprocessedLabels(): void {
@@ -227,7 +213,7 @@ export class ExcelController {
             if (!regel) return;
             if (regel.processed) return;
             this.increaseRowRange();
-            this.setCell(xlsx.utils.encode_cell({r: ++this.maxRow, c: 1}), 'asd');
+            this.setCellByKey(xlsx.utils.encode_cell({r: ++this.maxRow, c: 1}), 'asd');
             // TODO: make method for adding new row with label
         });
     }
