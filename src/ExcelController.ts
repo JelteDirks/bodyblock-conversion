@@ -1,10 +1,11 @@
 import path from "path";
-import {CellObject, WorkBook, WorkSheet} from "xlsx";
+import {CellAddress, CellObject, Range, WorkBook, WorkSheet} from "xlsx";
 import {Polis} from "./Polis";
 import {getNextColumnKey} from "./getNextColumnKey";
 import {Regel} from "./Regel";
 import {toLowerCase} from "./toLowerCase";
 import {compareInhoud} from "./compareInhoud";
+import {cellInRange} from "./cellInRange";
 
 const xlsx = require('xlsx');
 
@@ -185,6 +186,8 @@ export class ExcelController {
 
             if (!omschrijving || !inhoud) continue;
 
+            console.log(omschrijving, this.identifyLabelRange(r));
+
             for (let regel of this.polis.regels) {
                 if (!regel) continue;
                 if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
@@ -196,13 +199,36 @@ export class ExcelController {
         }
     }
 
+    public identifyLabelRange(r: number): Range {
+        const column = 'A';
+        let row = r;
+        let value: string | undefined;
+
+        while (!value) {
+            const cellAddress = {r: row, c: xlsx.utils.decode_col(column)};
+            const cellObject: CellObject = this.getSheet()[xlsx.utils.encode_cell(cellAddress)];
+
+            if (!!cellObject) {
+                value = cellObject.w;
+            }
+
+            if (!cellInRange(cellAddress, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
+                return {s: {c: xlsx.utils.decode_col(column), r}, e: {c: xlsx.utils.decode_col(column), r: row}};
+            }
+
+            row = row + 1;
+        }
+
+        return {s: {c: xlsx.utils.decode_col(column), r}, e: {c: xlsx.utils.decode_col(column), r: row - 1}};
+    }
+
     public addUnprocessedLabels(): void {
         this.polis.regels.forEach((regel: Regel) => {
             if (!regel) return;
             if (regel.processed) return;
-            console.log(JSON.stringify(regel, null, 2));
             this.increaseRowRange();
             this.setCell(xlsx.utils.encode_cell({r: ++this.maxRow, c: 1}), 'asd');
+            // TODO: make method for adding new row with label
         });
     }
 
