@@ -58,15 +58,24 @@ export class Regel {
 
         this.sortPosities();
 
+        if (/^\d{2}(\W|\^)*$/.test(this.regelTemplate)) {
+            this.posities.forEach((pos: Positie) => {
+                if (pos.instellingen.labelnummer) {
+                    this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
+                }
+            });
+
+            this.inhoud = this.regelTemplate.replace(/^\d{2}\s?/, '').trim();
+            this.exceptionHandled = true;
+            return true;
+        }
+
         if (/^\d{2}\s*.*/.test(this.regelTemplate) && (this.posities.length === 1) && (Object.keys(this.posities[0].instellingen).length === 0)) {
             this.inhoud = this.regelTemplate.replace(/^\d{2}\s?/, '').trim();
             this.exceptionHandled = true;
             return true;
         }
 
-        /**
-         * exceptions are caught before processing regular labels
-         */
         if (/[0-9]{2}(\s|\^)*$/.test(this.regelTemplate)) {
 
             this.omschrijving = 'n/a';
