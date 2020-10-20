@@ -64,7 +64,7 @@ export interface GroepInstellingen {
 
 export interface Instellingen extends Object {
     uitlijnen?: 'Links' | 'Rechts';
-    weergave?: 'Omschrijving' | 'Code';
+    weergave?: string;
     verwijderen?: 'niet verwijderen' | 'verwijderen';
     uitWacht?: 'Nee' | 'Ja';
     labelnummer?: string;

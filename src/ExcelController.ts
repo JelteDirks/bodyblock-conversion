@@ -1,19 +1,19 @@
 import path from "path";
 import {CellAddress, CellObject, Range, WorkBook, WorkSheet} from "xlsx";
 import {Polis} from "./Polis";
-import {getNextColumnKey} from "./getNextColumnKey";
 import {Regel} from "./Regel";
 import {toLowerCase} from "./toLowerCase";
 import {compareInhoud} from "./compareInhoud";
 import {cellInRange} from "./cellInRange";
 import {loopCellRange} from "./loopCellRange";
+import {addLabelToSheet} from "./addLabelToSheet";
 
 const xlsx = require('xlsx');
 
 export class ExcelController {
 
-    private readonly workbook: WorkBook;
-    private static defaultHeaders: { [key: string]: any } = {
+    readonly workbook: WorkBook;
+    static defaultHeaders: { [key: string]: any } = {
         A1: 'omschrijving',
         B1: 'inhoud',
         C1: 'weergave',
@@ -21,11 +21,11 @@ export class ExcelController {
         E1: 'regel verwijderen',
         F1: 'regel template'
     }
-    private headers: { [key: string]: any } = {...ExcelController.defaultHeaders};
-    private maatschappijColumn: number = -1; // 0-index number for maatschappij column
-    private maxRow: number = -1; // 0-indexed number for max row in sheet
-    private maxColumn: number = -1; // 0-indexed number for max column in sheet
-    private polis: Polis;
+    headers: { [key: string]: any } = {...ExcelController.defaultHeaders};
+    maatschappijColumn: number = -1; // 0-index number for maatschappij column
+    maxRow: number = -1; // 0-indexed number for max row in sheet
+    maxColumn: number = -1; // 0-indexed number for max column in sheet
+    polis: Polis;
 
     constructor(file: string, polis: Polis) {
 
@@ -44,7 +44,7 @@ export class ExcelController {
         this.setMaatschappijColumn();
     }
 
-    private setCellByAddress(address: CellAddress, value: any) {
+    setCellByAddress(address: CellAddress, value: any) {
         if (cellInRange(address, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
             this.getCellByAddress(address).v = value;
             return;
@@ -55,7 +55,7 @@ export class ExcelController {
         this.getCellByAddress(address).v = value;
     }
 
-    private setCellByKey(key: string, value: any) {
+    setCellByKey(key: string, value: any) {
 
         if (this.cellExists(key)) {
             this.getCellByKey(key).v = value;
@@ -66,26 +66,26 @@ export class ExcelController {
         this.getCellByKey(key).v = value;
     }
 
-    private getCellByAddress(address: CellAddress) {
+    getCellByAddress(address: CellAddress) {
         return this.getSheet()[xlsx.utils.encode_cell(address)];
     }
 
-    private getCellByKey(key: string): CellObject {
+    getCellByKey(key: string): CellObject {
         return this.getSheet()[key];
     }
 
-    private cellExists(key: string | CellAddress): boolean {
+    cellExists(key: string | CellAddress): boolean {
         if (typeof key === 'string') return !!this.getCellByKey(key);
         return !!this.getCellByAddress(key);
     }
 
-    private getHeadersAsArray(): string[] {
+    getHeadersAsArray(): string[] {
         return Object.keys(ExcelController.defaultHeaders).map((e: string) => {
             return ExcelController.defaultHeaders[e].toLowerCase();
         });
     }
 
-    private findKeyForHeader(name: string): string {
+    findKeyForHeader(name: string): string {
         for (let x in this.headers) {
             if (this.headers[x] === name) {
                 return x.replace(/[0-9]/g, '');
@@ -94,11 +94,11 @@ export class ExcelController {
         throw 'no key for header found';
     }
 
-    private getSheet(): WorkSheet {
+    getSheet(): WorkSheet {
         return this.workbook.Sheets[this.polis.branche]
     }
 
-    private setMaatschappijColumn(): void {
+    setMaatschappijColumn(): void {
         let r = 0;
         let c = 0;
 
@@ -106,8 +106,12 @@ export class ExcelController {
             const cellRef: string = xlsx.utils.encode_cell({r, c});
             const cellObject: CellObject = this.getSheet()[cellRef];
 
-            if (!cellInRange({r, c}, xlsx.utils.decode_range(this.getSheet()["!ref"])) || cellObject.w === this.polis.maatschappij) {
+            if (!cellInRange({
+                r,
+                c
+            }, xlsx.utils.decode_range(this.getSheet()["!ref"])) || cellObject.w === this.polis.maatschappij) {
                 this.maatschappijColumn = c;
+                this.setCellByAddress({c, r: 0}, this.polis.maatschappij);
                 this.increaseColumnRange(1);
             }
 
@@ -115,19 +119,19 @@ export class ExcelController {
         }
     }
 
-    private increaseRowRange(n: number = 1) {
+    increaseRowRange(n: number = 1) {
         const range = xlsx.utils.decode_range(this.getSheet()["!ref"]);
         range.e.r = range.e.r + n;
         this.getSheet()["!ref"] = xlsx.utils.encode_range(range);
     }
 
-    private increaseColumnRange(n: number = 1) {
+    increaseColumnRange(n: number = 1) {
         const range = xlsx.utils.decode_range(this.getSheet()["!ref"]);
         range.e.c = range.e.c + n;
         this.getSheet()["!ref"] = xlsx.utils.encode_range(range);
     }
 
-    private setMaxRow(): void {
+    setMaxRow(): void {
         const sheetRef = this.getSheet()["!ref"];
 
         if (!sheetRef) {
@@ -140,7 +144,7 @@ export class ExcelController {
         this.maxRow = range.e.r;
     }
 
-    private setMaxColumn(): void {
+    setMaxColumn(): void {
         const sheetRef = this.getSheet()["!ref"];
 
         // no ref means empty sheet
@@ -181,13 +185,14 @@ export class ExcelController {
                         this.setCellByKey(cellReference, 'x');
                     }), this);
                     regel.processed = true;
+                    r = labelRange.e.r;
                 }
             }
         }
     }
 
     public identifyLabelRange(r: number): Range {
-        const c: number = xlsx.utils.decode_col('A');
+        const c: number = xlsx.utils.decode_col(this.findKeyForHeader('omschrijving'));
         let row = r;
         let value: string | undefined;
 
@@ -213,6 +218,10 @@ export class ExcelController {
         this.polis.regels.forEach((regel: Regel) => {
             if (!regel) return;
             if (regel.processed) return;
+
+            const newRange = addLabelToSheet.call(this, regel);
+            this.maxRow = newRange.e.r;
+            this.increaseRowRange(1);
 
             // TODO: make method for adding new row with label
         });
