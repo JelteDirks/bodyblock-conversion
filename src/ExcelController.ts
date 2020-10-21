@@ -184,7 +184,6 @@ export class ExcelController {
                         this.setCellByKey(cellReference, 'x');
                     }), this);
                     regel.processed = true;
-                    r = labelRange.e.r;
                 }
             }
         }
@@ -193,9 +192,16 @@ export class ExcelController {
     public identifyLabelRange(r: number): Range {
         const c: number = xlsx.utils.decode_col(this.findKeyForHeader('omschrijving'));
         let row = r;
-        let value: string | undefined;
+        let value: string | undefined = '';
 
-        while (!value) {
+        const initialRow = r;
+        const initialCellAddress = {r: row, c: c};
+        const initialCellObject: CellObject = this.getSheet()[xlsx.utils.encode_cell(initialCellAddress)];
+        const initialValue = initialCellObject.w;
+
+        row = row + 1;
+
+        while (!value && (value !== initialValue)) {
             const cellAddress = {r: row, c: c};
             const cellObject: CellObject = this.getSheet()[xlsx.utils.encode_cell(cellAddress)];
 
@@ -204,13 +210,13 @@ export class ExcelController {
             }
 
             if (!cellInRange(cellAddress, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
-                return {s: {c, r}, e: {c, r: row}};
+                return {s: {c, r: initialRow}, e: {c, r: row}};
             }
 
             row = row + 1;
         }
 
-        return {s: {c, r}, e: {c, r: row - 1}};
+        return {s: {c, r: initialRow}, e: {c, r: row - 1}};
     }
 
     public addUnprocessedLabels(): void {
