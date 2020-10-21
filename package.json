@@ -1,6 +1,6 @@
 {
   "name": "bodyblock-conversion",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ANVA bodyblock omzetten naar excel files / gewenst fo notatie",
   "main": "dist/index.js",
   "scripts": {
