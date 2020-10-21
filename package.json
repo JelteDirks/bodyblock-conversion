@@ -6,10 +6,11 @@
   "scripts": {
     "compile": "tsc",
     "test": "npx ts-node src/bin/index.ts",
-    "start": "node lib/src/bin/index.js"
+    "start": "node lib/src/bin/index.js",
+    "demo": "npm run compile && node lib/src/bin/index.js -i static/hb6000.xlsx -o static/new.xlsx -a 'static/FML0200004'"
   },
   "bin": {
-    "convert-bodyblock": "lib/src/bin"
+    "convert-bodyblock": "lib/src/bin/index.js"
   },
   "repository": {
     "type": "git",

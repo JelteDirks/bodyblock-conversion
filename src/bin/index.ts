@@ -22,11 +22,11 @@ const argv = yargs(process.argv.slice(2)).options({
         description: 'path to output excel file',
         alias: ['output']
     },
-    src: {
+    a: {
         type: 'string',
         demandOption: true,
-        description: 'path to source file used for filling the excel file',
-        alias: ['source']
+        description: 'path to ANVA form which needs to be processed',
+        alias: ['anva']
     }
 }).argv;
 
@@ -38,19 +38,15 @@ if (path.extname(argv.i) !== '.xlsx') {
     throw 'input file does not have the correct extension (.xlsx): ' + path.extname(argv.i);
 }
 
-if (!fs.existsSync(argv.src)) {
-    throw 'source file does not exist: ' + argv.src;
+if (!fs.existsSync(argv.a)) {
+    throw 'source file does not exist: ' + argv.a;
 }
 
 if (!fs.existsSync(argv.i)) {
     throw 'input file does not exist: ' + argv.i;
 }
 
-if (!fs.existsSync(argv.o)) {
-    throw 'output file does not exist: ' + argv.o;
-}
-
-const testfilepath = path.resolve(argv.src);
+const anvaFile = path.resolve(argv.a);
 const polis = new Polis();
 const counterLineRE = /[0-9]{15,}/;
 const bouwsteenLine = /^Bouwsteen\s*.*\s*:\s*/;
@@ -58,7 +54,7 @@ const startSpace = /^\s*/;
 let offset = -1;
 
 (async function () {
-    const filestream = fs.createReadStream(testfilepath, {
+    const filestream = fs.createReadStream(anvaFile, {
         encoding: "latin1"
     });
 
