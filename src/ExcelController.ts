@@ -45,8 +45,9 @@ export class ExcelController {
     }
 
     setCellByAddress(address: CellAddress, value: any) {
-        if (cellInRange(address, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
+        if (!!this.getCellByAddress(address)) {
             this.getCellByAddress(address).v = value;
+            console.log(`set cell ${xlsx.utils.encode_cell(address)} to ${value}`);
             return;
         }
 
@@ -55,28 +56,8 @@ export class ExcelController {
         this.getCellByAddress(address).v = value;
     }
 
-    setCellByKey(key: string, value: any) {
-
-        if (this.cellExists(key)) {
-            this.getCellByKey(key).v = value;
-            return
-        }
-
-        this.workbook.Sheets[this.polis.branche][key] = {};
-        this.getCellByKey(key).v = value;
-    }
-
     getCellByAddress(address: CellAddress) {
         return this.getSheet()[xlsx.utils.encode_cell(address)];
-    }
-
-    getCellByKey(key: string): CellObject {
-        return this.getSheet()[key];
-    }
-
-    cellExists(key: string | CellAddress): boolean {
-        if (typeof key === 'string') return !!this.getCellByKey(key);
-        return !!this.getCellByAddress(key);
     }
 
     getHeadersAsArray(): string[] {
@@ -180,11 +161,10 @@ export class ExcelController {
                     const labelRange = this.identifyLabelRange(r);
                     labelRange.s.c = this.maatschappijColumn;
                     labelRange.e.c = this.maatschappijColumn;
-                    loopCellRange(labelRange, ((cellReference: string) => {
-                        this.setCellByKey(cellReference, 'x');
+                    loopCellRange(labelRange, ((cellAddress: CellAddress) => {
+                        this.setCellByAddress(cellAddress, 'x');
                     }), this);
                     regel.processed = true;
-                    r = labelRange.e.r;
                 }
             }
         }
@@ -211,13 +191,13 @@ export class ExcelController {
             }
 
             if (!cellInRange(cellAddress, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
-                return {s: {c, r: initialRow}, e: {c, r: row}};
+                return {s: {c, r: initialRow}, e: {c, r: row - 1}};
             }
 
             row = row + 1;
         }
 
-        return {s: {c, r: initialRow}, e: {c, r: row - 1}};
+        return {s: {c, r: initialRow}, e: {c, r: row - 2}};
     }
 
     public addUnprocessedLabels(): void {
