@@ -221,8 +221,6 @@ export class ExcelController {
             const newRange = addLabelToSheet.call(this, regel);
             this.maxRow = newRange.e.r;
             this.increaseRowRange(1);
-
-            // TODO: make method for adding new row with label
         });
     }
 
