@@ -184,6 +184,7 @@ export class ExcelController {
                         this.setCellByKey(cellReference, 'x');
                     }), this);
                     regel.processed = true;
+                    r = labelRange.e.r;
                 }
             }
         }
