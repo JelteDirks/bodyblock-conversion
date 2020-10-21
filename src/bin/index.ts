@@ -1,10 +1,14 @@
+#! /usr/local/bin node
+
+console.log('hello!');
+
 import path from "path";
 import * as fs from "fs";
 import * as readline from "readline";
-import {processLine} from "./processLine";
-import {Regel} from "./Regel";
-import {Polis} from "./Polis";
-import {ExcelController} from "./ExcelController";
+import {processLine} from "../processLine";
+import {Regel} from "../Regel";
+import {Polis} from "../Polis";
+import {ExcelController} from "../ExcelController";
 
 const testfilepath = path.resolve('formulieren/06000/FML0200029');
 const polis = new Polis();

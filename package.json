@@ -4,8 +4,11 @@
   "description": "ANVA bodyblock omzetten naar excel files / gewenst fo notatie",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npx webpack",
-    "test": "npx ts-node ./src/index.ts"
+    "compile": "tsc",
+    "test": "npx ts-node src/bin/index.ts"
+  },
+  "bin": {
+    "convert-bodyblock": "lib/src/bin"
   },
   "repository": {
     "type": "git",
@@ -20,15 +23,15 @@
   "devDependencies": {
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.5",
+    "@types/yargs": "^15.0.9",
     "jest": "^26.5.3",
     "ts-jest": "^26.4.1",
     "ts-loader": "^8.0.4",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.3",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "typescript": "^4.0.3"
   },
   "dependencies": {
-    "xlsx": "^0.16.8"
+    "xlsx": "^0.16.8",
+    "yargs": "^16.1.0"
   }
 }
