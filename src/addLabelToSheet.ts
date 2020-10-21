@@ -14,6 +14,7 @@ export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
 
     let r = this.maxRow + 1; // index to be used for adding new rows on top of the existing
     let c = 0; // index to be used for add new columns on top of the existing
+    let hasSubInfo = false; // boolean indicating if this label has sub info for adding x's for the maatschappij
 
     if (regel.omschrijving) {
         c = xlsx.utils.decode_col(this.findKeyForHeader('omschrijving'));
@@ -37,6 +38,7 @@ export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
 
         r++
         this.increaseRowRange(1);
+        hasSubInfo = false;
 
         Object.keys(positie.instellingen).forEach((key: string) => {
             const columntitel = instellingenMap[key];
@@ -46,7 +48,12 @@ export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
             c = xlsx.utils.decode_col(this.findKeyForHeader(columntitel));
             // @ts-ignore
             this.setCellByAddress({r, c}, positie.instellingen[key]);
+            hasSubInfo = true;
         });
+
+        if (hasSubInfo) {
+            this.setCellByAddress({r, c: this.maatschappijColumn}, 'x');
+        }
     }
 
     return {s: {c: 0, r: 0}, e: {c: this.maxColumn, r}}
