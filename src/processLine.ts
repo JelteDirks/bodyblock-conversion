@@ -1,37 +1,43 @@
 import {Regel} from "./Regel";
 
-let huidigeRegel: number = -1;
-let huidigePositie: number = -1;
-let huidigRegelObject: Regel;
+export class LineProcessor {
 
-export function processLine(line: string, regels: Regel[], offset: number) {
+    private huidigeRegel: number;
+    private huidigePositie: number;
 
-    // regex voor de initiële regels op te slaan
-    const regelRE = /^([0-9]{2})\s.+/;
-    if (regelRE.test(line)) {
-        const groups = line.match(regelRE);
-        if (!groups) throw 'no group found while matching regel';
-        regels[Number(groups[1])] = new Regel(line, Number(groups[1]), offset);
-        return;
+    constructor() {
+        this.huidigePositie = -1;
+        this.huidigeRegel = -1;
     }
 
-    // zoek uit in welke regel en op welke positie de huidige line.
-    const regelPositieRE = /^Regel\s+([0-9]+)\s+Positie\s+([0-9]*).*/;
-    if (regelPositieRE.test(line)) {
-        const groups = line.match(regelPositieRE);
+    processLine(line: string, regels: Regel[], offset: number) {
 
-        if (!groups) throw 'no groups found while matching regex of regel & position';
+        // regex voor de initiële regels op te slaan
+        const regelRE = /^([0-9]{2})\s.+/;
+        if (regelRE.test(line)) {
+            const groups = line.match(regelRE);
+            if (!groups) throw 'no group found while matching regel';
+            regels[Number(groups[1])] = new Regel(line, Number(groups[1]), offset);
+            return;
+        }
 
-        if (groups[1] === '') throw 'no regel found';
+        // zoek uit in welke regel en op welke positie de huidige line.
+        const regelPositieRE = /^Regel\s+([0-9]+)\s+Positie\s+([0-9]*).*/;
+        if (regelPositieRE.test(line)) {
+            const groups = line.match(regelPositieRE);
 
-        if (groups[2] === '') throw 'no position found';
+            if (!groups) throw 'no groups found while matching regex of regel & position';
 
-        huidigeRegel = Number(groups[1]);
-        huidigePositie = Number(groups[2]);
-        huidigRegelObject = regels[huidigeRegel];
-    }
+            if (groups[1] === '') throw 'no regel found';
 
-    if ((huidigeRegel > 0) && (huidigePositie > 0)) {
-        regels[huidigeRegel].processSettings(line, huidigeRegel, huidigePositie);
+            if (groups[2] === '') throw 'no position found';
+
+            this.huidigeRegel = Number(groups[1]);
+            this.huidigePositie = Number(groups[2]);
+        }
+
+        if ((this.huidigeRegel > 0) && (this.huidigePositie > 0)) {
+            regels[this.huidigeRegel].processSettings(line, this.huidigeRegel, this.huidigePositie);
+        }
     }
 }

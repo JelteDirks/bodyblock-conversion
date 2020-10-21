@@ -5,9 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "compile": "tsc",
-    "test": "npx ts-node src/bin/index.ts",
+    "test": "ts-node src/bin/index.ts -i test/static/hb6000.xlsx -o test/static/new.xlsx -a test/static/FML0200004",
     "start": "node lib/src/bin/index.js",
-    "demo": "npm run compile && node lib/src/bin/index.js -i static/hb6000.xlsx -o static/new.xlsx -a 'static/FML0200004'"
+    "demo": "npm run compile && node lib/src/bin/index.js -i test/static/hb6000.xlsx -o test/static/new.xlsx -a test/static/FML0200004",
+    "test-dir": "ts-node src/bin/index.ts -i test/static/hb6000.xlsx -o test/static/new.xlsx -d test/6000"
   },
   "bin": {
     "convert-bodyblock": "lib/src/bin/index.js"

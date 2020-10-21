@@ -106,13 +106,12 @@ export class ExcelController {
             const cellRef: string = xlsx.utils.encode_cell({r, c});
             const cellObject: CellObject = this.getSheet()[cellRef];
 
-            if (!cellInRange({
-                r,
-                c
-            }, xlsx.utils.decode_range(this.getSheet()["!ref"])) || cellObject.w === this.polis.maatschappij) {
+            if (!cellInRange({r, c}, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
                 this.maatschappijColumn = c;
                 this.setCellByAddress({c, r: 0}, this.polis.maatschappij);
                 this.increaseColumnRange(1);
+            } else if (cellObject.w === this.polis.maatschappij) {
+                this.maatschappijColumn = c;
             }
 
             c++;

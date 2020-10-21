@@ -3,7 +3,7 @@
 import path from "path";
 import * as fs from "fs";
 import * as readline from "readline";
-import {processLine} from "../processLine";
+import {LineProcessor} from "../processLine";
 import {Regel} from "../Regel";
 import {Polis} from "../Polis";
 import {ExcelController} from "../ExcelController";
@@ -24,9 +24,15 @@ const argv = yargs(process.argv.slice(2)).options({
     },
     a: {
         type: 'string',
-        demandOption: true,
+        demandOption: false,
         description: 'path to ANVA form which needs to be processed',
         alias: ['anva']
+    },
+    d: {
+        type: 'string',
+        demandOption: false,
+        description: 'specify directory in which all files should be processed',
+        alias: ['directory']
     }
 }).argv;
 
@@ -38,23 +44,45 @@ if (path.extname(argv.i) !== '.xlsx') {
     throw 'input file does not have the correct extension (.xlsx): ' + path.extname(argv.i);
 }
 
-if (!fs.existsSync(argv.a)) {
-    throw 'source file does not exist: ' + argv.a;
+if (!argv.a && !argv.d) {
+    throw 'no source file or directory specified';
 }
 
 if (!fs.existsSync(argv.i)) {
     throw 'input file does not exist: ' + argv.i;
 }
 
-const anvaFile = path.resolve(argv.a);
-const polis = new Polis();
 const counterLineRE = /[0-9]{15,}/;
 const bouwsteenLine = /^Bouwsteen\s*.*\s*:\s*/;
 const startSpace = /^\s*/;
-let offset = -1;
+let files: string[] = [];
 
-(async function () {
-    const filestream = fs.createReadStream(anvaFile, {
+if (argv.d) {
+    files = fs.readdirSync(argv.d);
+} else if (argv.a) {
+    files = [path.resolve(argv.a)];
+}
+
+files.forEach(async (file: string, i: number) => {
+
+    if (/DS_Store/.test(file)) {
+        return;
+    }
+
+    let resolvedFilePath;
+
+    if (argv.a) {
+        resolvedFilePath = path.resolve(argv.a);
+    } else if (argv.d) {
+        resolvedFilePath = path.resolve(path.join(argv.d, file));
+    }
+
+    if (!resolvedFilePath) {
+        console.warn(`resolved file path did not go well -d=${argv.d} -a=${argv.a}`);
+        return;
+    }
+
+    const filestream = fs.createReadStream(resolvedFilePath, {
         encoding: "latin1"
     });
 
@@ -62,6 +90,10 @@ let offset = -1;
         input: filestream,
         crlfDelay: Infinity
     });
+
+    let offset = -1;
+    let polis = new Polis();
+    let processor = new LineProcessor();
 
     for await (const line of rlInterface) {
         // calculate offset when counter line found
@@ -80,7 +112,7 @@ let offset = -1;
             polis.hoofdbranche = reversed[2];
         }
 
-        processLine(line, polis.regels, offset);
+        processor.processLine(line, polis.regels, offset);
     }
 
     polis.regels.forEach((r: Regel) => {
@@ -90,12 +122,12 @@ let offset = -1;
         r.setTemplateLabels();
     });
 
-    const excelController = new ExcelController(argv.i, polis);
+    const excelController = new ExcelController((i === 0) ? argv.i : argv.o, polis);
 
     excelController.loopExistingLabels();
     excelController.addUnprocessedLabels();
     excelController.save(argv.o);
-})();
+});
 
 
 
