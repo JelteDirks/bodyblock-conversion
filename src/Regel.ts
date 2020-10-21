@@ -84,9 +84,9 @@ export class Regel {
                 if (pos.instellingen.labelnummer) {
                     this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
                 }
-                this.inhoud = this.regelTemplate.replace(/\b[0-9]{2}\b/, '').trim();
             });
 
+            this.inhoud = this.regelTemplate.replace(/\b[0-9]{2}\b/, '').trim();
             this.exceptionHandled = true;
             return true;
         }
