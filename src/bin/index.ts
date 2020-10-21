@@ -1,7 +1,5 @@
 #! /usr/local/bin node
 
-console.log('hello!');
-
 import path from "path";
 import * as fs from "fs";
 import * as readline from "readline";
@@ -9,8 +7,50 @@ import {processLine} from "../processLine";
 import {Regel} from "../Regel";
 import {Polis} from "../Polis";
 import {ExcelController} from "../ExcelController";
+import yargs from "yargs";
 
-const testfilepath = path.resolve('formulieren/06000/FML0200029');
+const argv = yargs(process.argv.slice(2)).options({
+    i: {
+        type: 'string',
+        demandOption: true,
+        description: 'path to excel file that is used for filling',
+        alias: ['input']
+    },
+    o: {
+        type: 'string',
+        demandOption: true,
+        description: 'path to output excel file',
+        alias: ['output']
+    },
+    src: {
+        type: 'string',
+        demandOption: true,
+        description: 'path to source file used for filling the excel file',
+        alias: ['source']
+    }
+}).argv;
+
+if (path.extname(argv.o) !== '.xlsx') {
+    throw 'output file does not have the correct extension (.xlsx): ' + path.extname(argv.o);
+}
+
+if (path.extname(argv.i) !== '.xlsx') {
+    throw 'input file does not have the correct extension (.xlsx): ' + path.extname(argv.i);
+}
+
+if (!fs.existsSync(argv.src)) {
+    throw 'source file does not exist: ' + argv.src;
+}
+
+if (!fs.existsSync(argv.i)) {
+    throw 'input file does not exist: ' + argv.i;
+}
+
+if (!fs.existsSync(argv.o)) {
+    throw 'output file does not exist: ' + argv.o;
+}
+
+const testfilepath = path.resolve(argv.src);
 const polis = new Polis();
 const counterLineRE = /[0-9]{15,}/;
 const bouwsteenLine = /^Bouwsteen\s*.*\s*:\s*/;
@@ -54,11 +94,11 @@ let offset = -1;
         r.setTemplateLabels();
     });
 
-    const excelController = new ExcelController('static/hb6000.xlsx', polis);
+    const excelController = new ExcelController(argv.i, polis);
 
     excelController.loopExistingLabels();
     excelController.addUnprocessedLabels();
-    excelController.save();
+    excelController.save(argv.o);
 })();
 
 

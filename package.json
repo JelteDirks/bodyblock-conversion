@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "compile": "tsc",
-    "test": "npx ts-node src/bin/index.ts"
+    "test": "npx ts-node src/bin/index.ts",
+    "start": "node lib/src/bin/index.js"
   },
   "bin": {
     "convert-bodyblock": "lib/src/bin"

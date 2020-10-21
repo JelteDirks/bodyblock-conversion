@@ -227,7 +227,7 @@ export class ExcelController {
         });
     }
 
-    public save(): void {
-        xlsx.writeFile(this.workbook, path.resolve('static/new.xlsx'));
+    public save(dest: string): void {
+        xlsx.writeFile(this.workbook, path.resolve(dest));
     }
 }
