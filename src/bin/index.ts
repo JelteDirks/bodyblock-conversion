@@ -3,7 +3,7 @@
 import path from "path";
 import * as fs from "fs";
 import * as readline from "readline";
-import {LineProcessor} from "../processLine";
+import {LineProcessor} from "../LineProcessos";
 import {Regel} from "../Regel";
 import {Polis} from "../Polis";
 import {ExcelController} from "../ExcelController";
