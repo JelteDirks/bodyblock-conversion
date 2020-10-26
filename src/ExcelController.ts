@@ -191,7 +191,7 @@ export class ExcelController {
             const cellObject: CellObject = this.getSheet()[xlsx.utils.encode_cell(cellAddress)];
 
             if (!!cellObject) {
-                value = cellObject.w;
+                value = String(cellObject.v);
             }
 
             if (!cellInRange(cellAddress, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
