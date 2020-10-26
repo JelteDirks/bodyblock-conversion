@@ -6,11 +6,11 @@
   "scripts": {
     "start": "ts-node src/bin/index.ts -i formulieren/05000.xlsx -o formulieren/05000new.xlsx -d formulieren/05000",
     "compile": "tsc",
-    "test": "ts-node src/bin/index.ts -i test/excel/06000.xlsx -o test/excel/new.xlsx -a test/static/FML0200002",
-    "demo": "npm run compile && node lib/src/bin/index.js -i test/excel/06000.xlsx -o test/excel/new.xlsx -a test/static/FML0200004",
-    "test-dir": "ts-node src/bin/index.ts -i test/excel/06000.xlsx -o test/excel/new.xlsx -d test/6000",
-    "demo-dir": "npm run compile && node lib/src/bin/index.js -i test/excel/06000.xlsx -o test/excel/new.xlsx -d test/6000",
-    "find-file": "ts-node src/bin/find-file.ts -r=^Bouwsteen.*P357\\s*$ -d formulieren/05000"
+    "test": "ts-node src/bin/index.ts -i test/excel/main.xlsx -o test/excel/new.xlsx -d test/source",
+    "demo": "npm run compile && node lib/src/bin/index.js -i test/excel/main.xlsx -o test/excel/new.xlsx -a test/static/FML0200004",
+    "test-dir": "ts-node src/bin/index.ts -i test/excel/main.xlsx -o test/excel/new.xlsx -d test/source",
+    "demo-dir": "npm run compile && node lib/src/bin/index.js -i test/excel/main.xlsx -o test/excel/new.xlsx -d test/source",
+    "find-file": "ts-node src/bin/find-file.ts -r=^Bouwsteen.*P379\\s*$ -d formulieren/05000"
   },
   "bin": {
     "convert-bodyblock": "lib/src/bin/index.js"

@@ -167,7 +167,7 @@ export class Regel {
     public translateCharacters() {
         this.inhoud = translateCharacters(this.inhoud);
         this.omschrijving = translateCharacters(this.omschrijving);
-        this.regelTemplate = translateCharacters(this.omschrijving);
+        this.regelTemplate = translateCharacters(this.regelTemplate);
     }
 
     public processSettings(line: string, regel: number, positie: number): void {
