@@ -142,7 +142,7 @@ export class ExcelController {
     }
 
     public loopExistingLabels(): void {
-        for (let r = 0; r <= this.maxRow; ++r) {
+        for (let r = 1; r <= this.maxRow; ++r) {
             const omschrijvingCell = this.getCellByAddress({
                 r,
                 c: xlsx.utils.decode_col(this.findKeyForHeader('omschrijving'))
