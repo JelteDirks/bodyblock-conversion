@@ -7,6 +7,7 @@ import {cellInRange} from "./cellInRange";
 import {loopCellRange} from "./loopCellRange";
 import {addLabelToSheet} from "./addLabelToSheet";
 import {compareOmschrijving} from "./compareOmschrijving";
+import {sortByColumn} from "./sortByColumn";
 
 const xlsx = require('xlsx');
 
@@ -44,7 +45,7 @@ export class ExcelController {
         this.setMaatschappijColumn();
     }
 
-    private setRefByContent() {
+    setRefByContent() {
         const keys = Object.keys(this.getSheet());
         let maxRow = -1;
         let maxCol = -1;
@@ -214,6 +215,7 @@ export class ExcelController {
     }
 
     public save(dest: string): void {
+        sortByColumn.call(this, this.getSheet(), 'regel template');
         this.setRefByContent();
         xlsx.writeFile(this.workbook, path.resolve(dest));
     }

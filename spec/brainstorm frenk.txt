@@ -1,12 +1,12 @@
-1. Zoek maatschappij in Excel (rij 1)
-	Gevonden = Niks doen.
-	Niet gevonden = kolom aanmaken.
-2. Loop omschrijving kolom.
-   Omschrijving label niet gevonden = label toevoegen onderaan (in queue zetten voor toevoeging)
-   Omschrijving label gevonden = controleren op inhoud
-	Komt overeen = kruisje zetten bij maatschappij
-	Komt niet overeen = gevonden label appenden en label op nieuwe regel(s) toevoegen (in queue zetten voor toevoeging)
+index map:
+    02: A2:H3
+        A27:H27
+    03: A4:H7
 
-Queue voor toevoeging:
-!ref A1:H6 -> max row + 1 = (6 + 1)
-maatschappij column -> zoeken in eerste rij
+
+
+{
+    A2: 'omschrijving'
+    B2: '...'
+}
+
