@@ -124,7 +124,6 @@ export class Regel {
         }
 
         this.inhoud = this.regelTemplate.substr(this.offset + second.nummer - 1);
-        this.inhoud = translateCharacters(this.inhoud);
     }
 
     public setOmschrijving(): void {
@@ -163,8 +162,12 @@ export class Regel {
                 this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
             }
         });
+    }
 
-        this.regelTemplate = translateCharacters(this.regelTemplate);
+    public translateCharacters() {
+        this.inhoud = translateCharacters(this.inhoud);
+        this.omschrijving = translateCharacters(this.omschrijving);
+        this.regelTemplate = translateCharacters(this.omschrijving);
     }
 
     public processSettings(line: string, regel: number, positie: number): void {

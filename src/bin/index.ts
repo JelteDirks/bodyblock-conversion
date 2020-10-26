@@ -120,6 +120,7 @@ files.forEach(async (file: string, i: number) => {
         r.setInhoud();
         r.setInhoudLabels();
         r.setTemplateLabels();
+        r.translateCharacters();
     });
 
     const excelController = new ExcelController((i === 0) ? argv.i : argv.o, polis);
