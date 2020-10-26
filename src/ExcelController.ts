@@ -7,6 +7,7 @@ import {compareInhoud} from "./compareInhoud";
 import {cellInRange} from "./cellInRange";
 import {loopCellRange} from "./loopCellRange";
 import {addLabelToSheet} from "./addLabelToSheet";
+import {compareOmschrijving} from "./compareOmschrijving";
 
 const xlsx = require('xlsx');
 
@@ -47,7 +48,6 @@ export class ExcelController {
     setCellByAddress(address: CellAddress, value: any) {
         if (!!this.getCellByAddress(address)) {
             this.getCellByAddress(address).v = value;
-            console.log(`set cell ${xlsx.utils.encode_cell(address)} to ${value}`);
             return;
         }
 
@@ -156,8 +156,8 @@ export class ExcelController {
 
             for (let regel of this.polis.regels) {
                 if (!regel) continue;
-                if ((toLowerCase(omschrijving) === toLowerCase(regel.omschrijving))
-                    && compareInhoud(inhoud, regel.inhoud)) {
+                if (compareOmschrijving(omschrijving, regel.omschrijving) &&
+                    compareInhoud(inhoud, regel.inhoud)) {
                     const labelRange = this.identifyLabelRange(r);
                     labelRange.s.c = this.maatschappijColumn;
                     labelRange.e.c = this.maatschappijColumn;
