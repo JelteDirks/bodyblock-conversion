@@ -5,7 +5,7 @@ import {translateCharacters} from "./translateCharacters";
 export class Regel {
     public regelnummer: number;
     public regelTemplate: string;
-    public omschrijving: string = '';
+    public omschrijving: string = 'n/a';
     public inhoud: string = '';
     public posities: Positie[] = [];
     public processed: boolean = false;
@@ -59,8 +59,6 @@ export class Regel {
         this.sortPosities();
 
         if (/\d{2}(\s|\^)*$/.test(this.regelTemplate)) {
-
-            this.omschrijving = 'n/a';
 
             this.posities.forEach((pos: Positie) => {
                 if (pos.instellingen.labelnummer) {
