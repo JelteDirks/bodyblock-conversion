@@ -40,7 +40,6 @@ export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
         if (Object.keys(positie.instellingen).length <= 0) continue;
 
         r++
-        this.increaseRowRange(1);
         hasSubInfo = false;
 
         Object.keys(positie.instellingen).forEach((key: string) => {

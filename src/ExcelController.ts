@@ -2,7 +2,6 @@ import path from "path";
 import {CellAddress, CellObject, Range, WorkBook, WorkSheet} from "xlsx";
 import {Polis} from "./Polis";
 import {Regel} from "./Regel";
-import {toLowerCase} from "./toLowerCase";
 import {compareInhoud} from "./compareInhoud";
 import {cellInRange} from "./cellInRange";
 import {loopCellRange} from "./loopCellRange";
@@ -43,6 +42,23 @@ export class ExcelController {
         this.setMaxRow();
         this.setMaxColumn()
         this.setMaatschappijColumn();
+    }
+
+    private setRefByContent() {
+        const keys = Object.keys(this.getSheet());
+        let maxRow = -1;
+        let maxCol = -1;
+
+        for (let key of keys) {
+            if (key.indexOf('!') > -1) continue;
+            const address = xlsx.utils.decode_cell(key);
+            maxRow = (maxRow < address.r) ? address.r : maxRow;
+            maxCol = (maxCol < address.c) ? address.c : maxCol;
+        }
+
+        const newRef: Range = {s: {r: 0, c: 0}, e: {r: maxRow, c: maxCol}};
+
+        this.getSheet()["!ref"] = xlsx.utils.encode_range(newRef);
     }
 
     setCellByAddress(address: CellAddress, value: any) {
@@ -90,25 +106,12 @@ export class ExcelController {
             if (!cellInRange({r, c}, xlsx.utils.decode_range(this.getSheet()["!ref"]))) {
                 this.maatschappijColumn = c;
                 this.setCellByAddress({c, r: 0}, this.polis.maatschappij);
-                this.increaseColumnRange(1);
             } else if (cellObject.w === this.polis.maatschappij) {
                 this.maatschappijColumn = c;
             }
 
             c++;
         }
-    }
-
-    increaseRowRange(n: number = 1) {
-        const range = xlsx.utils.decode_range(this.getSheet()["!ref"]);
-        range.e.r = range.e.r + n;
-        this.getSheet()["!ref"] = xlsx.utils.encode_range(range);
-    }
-
-    increaseColumnRange(n: number = 1) {
-        const range = xlsx.utils.decode_range(this.getSheet()["!ref"]);
-        range.e.c = range.e.c + n;
-        this.getSheet()["!ref"] = xlsx.utils.encode_range(range);
     }
 
     setMaxRow(): void {
@@ -207,11 +210,11 @@ export class ExcelController {
 
             const newRange = addLabelToSheet.call(this, regel);
             this.maxRow = newRange.e.r;
-            this.increaseRowRange(1);
         });
     }
 
     public save(dest: string): void {
+        this.setRefByContent();
         xlsx.writeFile(this.workbook, path.resolve(dest));
     }
 }
