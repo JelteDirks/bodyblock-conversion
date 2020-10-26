@@ -19,6 +19,9 @@ export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
     if (regel.omschrijving) {
         c = xlsx.utils.decode_col(this.findKeyForHeader('omschrijving'));
         this.setCellByAddress({r, c}, regel.omschrijving);
+    } else {
+        c = xlsx.utils.decode_col(this.findKeyForHeader('omschrijving'));
+        this.setCellByAddress({r, c}, 'n/a');
     }
 
     if (regel.inhoud) {
