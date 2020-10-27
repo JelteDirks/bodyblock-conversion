@@ -156,7 +156,7 @@ export class ExcelController {
             const omschrijving: string | undefined = <string | undefined>omschrijvingCell?.v;
             const inhoud: string | undefined = <string | undefined>inhoudCell?.v;
 
-            if (!omschrijving || !inhoud) continue;
+            if (typeof omschrijving === 'undefined' || typeof inhoud === 'undefined') continue;
 
             for (let regel of this.polis.regels) {
                 if (!regel) continue;

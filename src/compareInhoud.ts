@@ -3,7 +3,7 @@ import {toLowerCase} from "./toLowerCase";
 const labelOnlyRegex: RegExp = /^(\s|[0-9]{5})+$/;
 const labelRegex: RegExp = /[0-9]{5}/g;
 
-export function compareInhoud (a: string, b: string): boolean {
+export function compareInhoud(a: string, b: string): boolean {
 
 
     if (toLowerCase(a) === toLowerCase(b)) return true;

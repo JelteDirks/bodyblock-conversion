@@ -58,7 +58,5 @@ export function sortByColumn(this: ExcelController, sheet: WorkSheet, column: st
         }), this);
     });
 
-    console.log(tmpSheet);
-
     return Object.assign(sheet, tmpSheet);
 }
