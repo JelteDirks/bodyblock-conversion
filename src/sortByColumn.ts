@@ -34,24 +34,29 @@ export function sortByColumn(this: ExcelController, sheet: WorkSheet, column: st
         r = labelRange.e.r + 1;
     }
 
-    let tmpSheet = {};
-
     const sorted = [...labelRangeMap.keys()].sort();
 
+    let tmpSheet = {};
+    let newRow = 0;
+
     sorted.map((rngKey: string) => {
+        let lastRow = 0;
         const rng: Range = <Range>labelRangeMap.get(rngKey);
 
         loopCellRange(rng, ((cellAddress: CellAddress) => {
-
+            const {c, r} = cellAddress;
             const cell = this.getCellByAddress(cellAddress);
 
+            if (r !== lastRow) {
+                newRow = newRow + 1;
+            }
+
+            lastRow = r;
+
+            setCellOnPlain(newRow, c, cell?.v, tmpSheet);
 
         }), this);
     });
 
-    console.log(tmpSheet);
-
-    console.log('-----');
-
-    return sheet;
+    return Object.assign(sheet, tmpSheet);
 }
