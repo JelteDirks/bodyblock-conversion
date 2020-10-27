@@ -15,7 +15,7 @@ export function sortByColumn(this: ExcelController, sheet: WorkSheet, column: st
     let originalSheetRange: Range = xlsx.utils.decode_range(ref);
     let sortColumnIndex: number = xlsx.utils.decode_col(this.findKeyForHeader(column));
     let maxColumn: number = xlsx.utils.decode_range(ref).e.c
-    let indexingToLabelMap: Map<string, Range> = new Map();
+    let labelRangeMap: Map<string, Range> = new Map();
 
     let r = 1;
 
@@ -29,36 +29,29 @@ export function sortByColumn(this: ExcelController, sheet: WorkSheet, column: st
             e: {c: maxColumn, r: labelRange.e.r}
         };
 
-        indexingToLabelMap.set(cellValue, rangeForIndexing);
+        labelRangeMap.set(cellValue, rangeForIndexing);
 
         r = labelRange.e.r + 1;
     }
 
-    const sorted = [...indexingToLabelMap.keys()].sort();
-    const tmpSheet = {};
+    let tmpSheet = {};
 
-    let rngKey;
-    while ((rngKey = sorted.shift()) !== undefined) {
-        const rng: Range | undefined = indexingToLabelMap.get(rngKey);
+    const sorted = [...labelRangeMap.keys()].sort();
 
-        if (!rng) continue;
-
-        let newRow = 1;
-        let lastRow = rng.s.r;
+    sorted.map((rngKey: string) => {
+        const rng: Range = <Range>labelRangeMap.get(rngKey);
 
         loopCellRange(rng, ((cellAddress: CellAddress) => {
-            let {r: oldRow, c} = cellAddress;
 
-            if ((oldRow - lastRow) === 1) {
-                ++newRow;
-            } else {
-                lastRow = oldRow;
-            }
             const cell = this.getCellByAddress(cellAddress);
-            if (!cell) return;
-            setCellOnPlain(xlsx.utils.encode_cell({r: newRow, c}), cell.v, tmpSheet);
+
+
         }), this);
-    }
+    });
+
+    console.log(tmpSheet);
+
+    console.log('-----');
 
     return sheet;
 }
