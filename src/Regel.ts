@@ -137,6 +137,7 @@ export class Regel {
 
         if (!first || !second) {
             console.warn('problem setting omschrijving - first position:', first, 'second position:', second);
+            console.warn('at:', this);
             return;
         }
 
