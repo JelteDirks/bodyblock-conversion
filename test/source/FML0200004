@@ -1,6 +1,6 @@
 Nedasco B.V.                                                                                          Datum 21-10-2020 Bladnr.   1
 
-Bouwsteen  P0XMV : POL16/Polis/05000/05515/P313
+Bouwsteen  P0YON : POL16/Polis/05000/05011/P357
 
             1         2         3         4         5         6         7         8         9        10        11        12        13
    123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
@@ -8,16 +8,14 @@ Bouwsteen  P0XMV : POL16/Polis/05000/05515/P313
 02 Soort verzekering         ^
 03 Risico adres              ^ ^ ^
 04                           ^ ^
-05 Soort recreatiewoning     ^
+05 Soort object              ^
 06 Bestemming                ^
 07 Bouwaard muren            ^
 08 Bouwaard dak              ^
-09 Meeverzekerd verhuur      ^
-10 Meeverzekerd zonnepanelen ^
-11 Eigen risico              Õ ^ Vrijwillig
-12
-13 Verzekerde rubrieken                              Verzekerd bedrag
-14                           - Aansprakelijkheid
+09 Bouwaard vloeren          ^
+10 Eigen risico              Õ ^
+11
+12 Verzekerde rubrieken                              Verzekerd bedrag
 
 Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
 Regel      2 Positie  27  Printer instelling: Horizontale positie  6 cm
@@ -37,12 +35,12 @@ Regel      3 Positie  27  Printer instelling: Horizontale positie  6 cm
                                               Regel verwijderen indien label niet gevuld
                                               Gegevens uit wachtbestand halen: Nee
 Regel      3 Positie  29  Label 10710       : Risicoadres huisnummer
-                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 21-10-2020 Bladnr.   2
-
-Bouwsteen  P0XMV : POL16/Polis/05000/05515/P313
-
+                                              Uitlijnen Links
                                               Weergave: Getal exclusief decimalen
-                                              Regel niet verwijderen indien label niet gevuld
+                                              Regel niet verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 21-10-2020 Bladnr.   2
+
+Bouwsteen  P0YON : POL16/Polis/05000/05011/P357
+
                                               Gegevens uit wachtbestand halen: Ja
                                               Omrekenen op jaarbasis: Nee
                                               Negatief het "-" teken afdrukken: Ja
@@ -76,12 +74,12 @@ Regel      6 Positie  27  Printer instelling: Horizontale positie  6 cm
                                               Uitlijnen Links
                                               Weergave: Omschrijving
                                               Regel verwijderen indien label niet gevuld
-                                              Gegevens uit wachtbestand halen: NeeNedasco B.V.                                                                                          Datum 21-10-2020 Bladnr.   3
-
-Bouwsteen  P0XMV : POL16/Polis/05000/05515/P313
-
+                                              Gegevens uit wachtbestand halen: Nee
 Regel      7 Positie   1  Printer instelling: Hoogte primair: 7 punten
-Regel      7 Positie  27  Printer instelling: Horizontale positie  6 cm
+Regel      7 Positie  27  Printer instelling: Horizontale positie  6 cmNedasco B.V.                                                                                          Datum 21-10-2020 Bladnr.   3
+
+Bouwsteen  P0YON : POL16/Polis/05000/05011/P357
+
                                               Hoogte primair: 10 punten
                           Label 10686       : Bouwaard muren
                                               Uitlijnen Links
@@ -94,31 +92,22 @@ Regel      8 Positie  27  Printer instelling: Horizontale positie  6 cm
                           Label 10685       : Bouwaard dak
                                               Uitlijnen Links
                                               Weergave: Omschrijving
-                                              Regel niet verwijderen indien label niet gevuld
-                                              Gegevens uit wachtbestand halen: Ja
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
 Regel      9 Positie   1  Printer instelling: Hoogte primair: 7 punten
 Regel      9 Positie  27  Printer instelling: Horizontale positie  6 cm
                                               Hoogte primair: 10 punten
-                          Label 11674       : Meeverzekerd verhuur
+                          Label 10684       : Bouwaard vloeren
                                               Uitlijnen Links
+                                              Weergave: Omschrijving
                                               Regel verwijderen indien label niet gevuld
-                                              Gegevens uit wachtbestand halen: Ja
+                                              Gegevens uit wachtbestand halen: Nee
 Regel     10 Positie   1  Printer instelling: Hoogte primair: 7 punten
 Regel     10 Positie  27  Printer instelling: Horizontale positie  6 cm
                                               Hoogte primair: 10 punten
-                          Label 13520       : Zonnepanelen aanwezig J/N
-                                              Uitlijnen Links
-                                              Regel verwijderen indien label niet gevuld
-                                              Gegevens uit wachtbestand halen: Ja
-Regel     11 Positie   1  Printer instelling: Hoogte primair: 7 punten
-Regel     11 Positie  27  Printer instelling: Horizontale positie  6 cm
-                                              Hoogte primair: 10 punten
-Regel     11 Positie  29  Printer instelling: Spati‰ring primair: Vast
+Regel     10 Positie  29  Printer instelling: Spati‰ring primair: Vast
                                               Dikte primair: Vet
-                          Label 10043       : Eigen risico bedragNedasco B.V.                                                                                          Datum 21-10-2020 Bladnr.   4
-
-Bouwsteen  P0XMV : POL16/Polis/05000/05515/P313
-
+                          Label 10043       : Eigen risico bedrag
                                               Uitlijnen Links
                                               Weergave: Getal inclusief decimalen
                                               Regel verwijderen indien label niet gevuld
@@ -126,11 +115,12 @@ Bouwsteen  P0XMV : POL16/Polis/05000/05515/P313
                                               Omrekenen op jaarbasis: Nee
                                               Negatief het "-" teken afdrukken: Ja
                                               Waarde niet optellen
-Regel     11 Positie  30  Printer instelling: Spati‰ring primair: Proportioneel
+Regel     10 Positie  30  Printer instelling: Spati‰ring primair: ProportioneelNedasco B.V.                                                                                          Datum 21-10-2020 Bladnr.   4
+
+Bouwsteen  P0YON : POL16/Polis/05000/05011/P357
+
                                               Dikte primair: Medium
-Regel     13 Positie   1  Printer instelling: Hoogte primair: 7 punten
-Regel     13 Positie  34  Printer instelling: Horizontale positie  6 cm
+Regel     12 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     12 Positie  34  Printer instelling: Horizontale positie  6 cm
                                               Hoogte primair: 10 punten
-Regel     13 Positie  51  Printer instelling: Horizontale positie 15,2 cm
-Regel     14 Positie  27  Printer instelling: Horizontale positie  6 cm
-                                              Hoogte primair: 10 punten 
+Regel     12 Positie  51  Printer instelling: Horizontale positie 15,2 cm 
