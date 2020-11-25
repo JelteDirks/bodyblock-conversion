@@ -1,0 +1,38 @@
+Nedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   1
+
+Bouwsteen  P0YEB : POL16/Polis/01000/01050/P350
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering           Persoonlijke ongevallen
+03 Beroep                      ^
+04 Gevarenklasse               ^
+05
+06 Verzekerde rubrieken                              Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  29  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+Regel      2 Positie  52  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  29  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80931       : Beroep (Allianz Ongevallen)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  29  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10090       : Gevarenklasse
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  35  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      6 Positie  51  Printer instelling: Horizontale positie 15,2 cm 

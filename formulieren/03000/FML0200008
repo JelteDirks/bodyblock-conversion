@@ -1,0 +1,446 @@
+Nedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   1
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering            ^
+03 Soort vaartuig               ^
+04 Merk en type                 ^ ^ ^
+05 Chassisnummer                ^
+06 Bouwjaar vaartuig            ^
+07 Dekkingsgebied               ^
+08 Dagwaarde boot en motor      Õ ^
+09 Inboedel                     Õ ^
+10 Nieuwwaarde garantie         ^
+11 Vaste waarde                 ^
+12 Vaste taxatie                ^
+13 Gebruik                      ^
+14
+15 Soort motor                  ^
+16 Merk en type motor           ^ ^
+17 Bouwjaar                     ^
+18 Soort brandstof              ^
+19 Motornummer                  ^
+20 Aantal pk                    ^
+21                                                                                 ^
+22 Soort trailer                ^
+23 Merk en type trailer         ^ ^
+24 Bouwjaar                     ^
+25 Chassisnummer                ^
+26 Wielklem aanwezig            ^
+27 Disselslot aanwezig          ^
+28 Dagwaarde trailer            Õ ^
+29                                                                                 ^
+30 Soort volgboot               ^
+31 Merk en type volgboot        ^ ^
+32 Bouwjaar                     ^
+33 HIN-nummer                   ^
+34 Dagwaarde Volgboot           Õ ^35
+36 No-claim                     Trede ^ = ^ %
+37 Schadevrije jaren            ^
+38 Eigen risico                 Õ ^  ^
+39 Eigen risico vrijwillig      Õ ^
+40
+41 Verzekerde rubrieken                             Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+                          Label 10142       : Branche
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      2 Positie  32  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10696       : Soort vaartuig
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10218       : Auto merk
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie  32  Label 10219       : Auto model
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie  34  Label 10220       : Auto type
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: NeeNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   2
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+Regel      5 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      5 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11467       : HIN-nummer vaartuig
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10034       : Bouwjaar
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      7 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      7 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10246       : Dekkingsgebied (code)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      8 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      8 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      8 Positie  32  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 10041       : Dagwaarde
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: NeeNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   3
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      8 Positie  33  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel      9 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      9 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      9 Positie  32  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 11254       : Verzekerd bedrag inventaris
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      9 Positie  33  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel     10 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     10 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 12348       : Meeverzekerd nieuwwaardegarantie
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     11 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     11 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80774       : Vaste waardedekking
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     12 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     12 Positie  30  Printer instelling: Horizontale positie  6 cmNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   4
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Hoogte primair: 10 punten
+                          Label 11335       : Taxatie uitgevoerd
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     13 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     13 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11465       : Gebruik vaartuig
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     15 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     15 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11456       : Soort vaartuigmotor
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     16 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     16 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11455       : Merk vaartuigmotor
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     16 Positie  32  Label 11457       : Type vaartuigmotor
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     17 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     17 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11453       : Bouwjaar vaartuigmotorNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   5
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     18 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     18 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10234       : Auto soort brandstof
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     19 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     19 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11454       : Chassisnummer vaartuigmotor
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     20 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     20 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11452       : Aantal pk vaartuigmotor
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     21 Positie  81  Printer instelling: Horizontale positie buiten marge
+                          Label 11493       : Merk aanhangwagen
+                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   6
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     22 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     22 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11667       : Soort aanhangwagen
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     23 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     23 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11493       : Merk aanhangwagen
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     23 Positie  32  Label 11495       : Type aanhangwagen
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     24 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     24 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11490       : Bouwjaar aanhangwagen
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     25 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     25 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11491       : Chassisnummer aanhangwagenNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   7
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     26 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     26 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11259       : Wielklem aanwezig
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     27 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     27 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11434       : Disselslot aanwezig
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     28 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     28 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     28 Positie  32  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 11492       : Dagwaarde aanhangwagen
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     28 Positie  33  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel     29 Positie  81  Printer instelling: Horizontale positie buiten marge
+                          Label 11483       : Merk volgboot
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   8
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     30 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     30 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 12313       : Soort volgboot
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     31 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     31 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11483       : Merk volgboot
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     31 Positie  32  Label 11487       : Type volgboot
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     32 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     32 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11476       : Bouwjaar volgboot
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     33 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     33 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11480       : HIN-nummer volgboot
+                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   9
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     34 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     34 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     34 Positie  32  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 11478       : Dagwaarde volgboot
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     34 Positie  33  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel     36 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     36 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     36 Positie  36  Label 10046       : B/M trede
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     36 Positie  40  Label 10050       : B/M percentage
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Vervangen door: 0,00
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     37 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     37 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 puntenNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.  10
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                          Label 10049       : B/M terugvaltrede
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Vervangen door: 0
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     38 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     38 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     38 Positie  32  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 10043       : Eigen risico bedrag
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     38 Positie  33  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel     38 Positie  35  Label 10044       : Eigen risico omschrijving
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     39 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     39 Positie  30  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     39 Positie  32  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 11450       : Eigen risico (vrijwillig extra)
+                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.  11
+
+Bouwsteen  P0XXT : POL16/Polis/03000/03200/P384
+
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     39 Positie  33  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel     41 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     41 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     41 Positie  50  Printer instelling: Horizontale positie 15,2 cm 

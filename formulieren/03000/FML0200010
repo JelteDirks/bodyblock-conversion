@@ -1,0 +1,44 @@
+Nedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   1
+
+Bouwsteen  P0XR4 : POL16/Polis/03000/03300/P379
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering        VvAA hobby- en sportartikelenverzekering
+03 Eigen risico             Õ ^  ^
+04
+05 Verzekerde rubrieken                             Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+Regel      2 Positie  67  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      3 Positie  28  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 10043       : Eigen risico bedrag
+                                              Uitlijnen Rechts Lengte 10
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      3 Positie  29  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel      3 Positie  31  Label 10044       : Eigen risico omschrijving
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      5 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      5 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 puntenNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   2
+
+Bouwsteen  P0XR4 : POL16/Polis/03000/03300/P379
+
+Regel      5 Positie  50  Printer instelling: Horizontale positie 15,2 cm 

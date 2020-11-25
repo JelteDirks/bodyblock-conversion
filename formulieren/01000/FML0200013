@@ -1,0 +1,56 @@
+Nedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   1
+
+Bouwsteen  P0XON : POL16/Polis/01000/01060
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering           Ongevallen
+03 Gezinssamenstelling         ^
+04 Eindleeftijd verzekerde     ^
+05 Eindleeftijd verzekerd kind ^
+06
+07 Verzekerde rubrieken                              Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  29  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+Regel      2 Positie  39  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  29  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10694       : Gezinssamenstelling
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  29  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10067       : Eindleeftijd
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      5 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      5 Positie  29  Printer instelling: Horizontale positie  6 cmNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   2
+
+Bouwsteen  P0XON : POL16/Polis/01000/01060
+
+                                              Hoogte primair: 10 punten
+                          Label 10251       : Leeftijd bij aanvang polis
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      7 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      7 Positie  35  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      7 Positie  51  Printer instelling: Horizontale positie 15,2 cm 

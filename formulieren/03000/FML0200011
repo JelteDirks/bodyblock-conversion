@@ -1,0 +1,30 @@
+Nedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   1
+
+Bouwsteen  P0XLG : POL16/Polis/03000/03320
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering        Golfverzekering
+03
+04 Hoedanigheid             ^
+05
+06 Verzekerde rubrieken                             Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+Regel      2 Positie  41  Printer instelling: Dikte primair: Medium
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84767       : Persoon of gezin
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      6 Positie  50  Printer instelling: Horizontale positie 15,2 cm 

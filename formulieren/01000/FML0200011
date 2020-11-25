@@ -1,0 +1,319 @@
+Nedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   1
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering       ^
+03 Gezinssamenstelling     ^
+04 Eindleeftijd            ^ jaar
+05 Beroep                  ^
+06 Beroep                  ^
+07 Stijgingspercentage     ^
+08 Verhoogde uitk. Medisch ^
+09 Begunstigde             ^
+10
+11 Verzekerde(n)           Naam              Geboortedatum                                     ^
+12                         ^ ^ ^             ^
+13                         ^ ^ ^             ^
+14                         ^ ^ ^             ^
+15                         ^ ^ ^             ^
+16                         ^ ^ ^             ^
+17                         ^ ^ ^             ^
+18                         ^ ^ ^             ^
+19                         ^ ^ ^             ^
+20                         ^ ^ ^             ^
+21
+22 Verzekerde rubrieken                              Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+                          Label 10142       : Branche
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      2 Positie  26  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 puntenNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   2
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+Regel      3 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10694       : Gezinssamenstelling
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10067       : Eindleeftijd
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      5 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      5 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10063       : Beroep polis (code)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80949       : Beroep (Av‚ro Ongevallen)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      7 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      7 Positie  25  Printer instelling: Horizontale positie  6 cmNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   3
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+                                              Hoogte primair: 10 punten
+                          Label 10104       : Stijgings %
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      8 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      8 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 12442       : Verhoogde uitkering invaliditeit JN
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      9 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      9 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10101       : Begunstigde
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     11 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     11 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+Regel     11 Positie  43  Printer instelling: Horizontale positie 14 cm
+Regel     11 Positie  56  Printer instelling: Dikte primair: Medium
+Regel     11 Positie  93  Printer instelling: Horizontale positie buiten marge
+                          Label 10630       : Verzekerde 1 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     12 Positie  25  Printer instelling: Horizontale positie  6 cmNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   4
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+                                              Hoogte primair: 10 punten
+                          Label 10631       : Verzekerde 1 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     12 Positie  27  Label 10632       : Verzekerde 1 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     12 Positie  29  Label 10630       : Verzekerde 1 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     12 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10633       : Verzekerde 1 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     13 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10637       : Verzekerde 2 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     13 Positie  27  Label 10638       : Verzekerde 2 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     13 Positie  29  Label 10636       : Verzekerde 2 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     13 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10639       : Verzekerde 2 geboortedatum
+                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   5
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     14 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10643       : Verzekerde 3 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     14 Positie  27  Label 10644       : Verzekerde 3 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     14 Positie  29  Label 10642       : Verzekerde 3 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     14 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10645       : Verzekerde 3 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     15 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10649       : Verzekerde 4 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     15 Positie  27  Label 10650       : Verzekerde 4 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     15 Positie  29  Label 10648       : Verzekerde 4 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   6
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     15 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10651       : Verzekerde 4 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     16 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10655       : Verzekerde 5 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     16 Positie  27  Label 10656       : Verzekerde 5 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     16 Positie  29  Label 10654       : Verzekerde 5 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     16 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10657       : Verzekerde 5 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     17 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10661       : Verzekerde 6 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     17 Positie  27  Label 10662       : Verzekerde 6 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   7
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     17 Positie  29  Label 10660       : Verzekerde 6 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     17 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10663       : Verzekerde 6 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     18 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10667       : Verzekerde 7 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     18 Positie  27  Label 10668       : Verzekerde 7 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     18 Positie  29  Label 10666       : Verzekerde 7 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     18 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10669       : Verzekerde 7 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     19 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10673       : Verzekerde 8 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   8
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     19 Positie  27  Label 10674       : Verzekerde 8 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     19 Positie  29  Label 10672       : Verzekerde 8 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     19 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10675       : Verzekerde 8 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     20 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10679       : Verzekerde 9 voorletters
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     20 Positie  27  Label 10680       : Verzekerde 9 voorvoegsels
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     20 Positie  29  Label 10678       : Verzekerde 9 naam
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     20 Positie  43  Printer instelling: Horizontale positie 14 cm
+                          Label 10681       : Verzekerde 9 geboortedatum
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     22 Positie   1  Printer instelling: Hoogte primair: 7 puntenNedasco B.V.                                                                                          Datum 25-11-2020 Bladnr.   9
+
+Bouwsteen  P0XF1 : POL16/Polis/01000/01050
+
+Regel     22 Positie  35  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     22 Positie  51  Printer instelling: Horizontale positie 15,2 cm 
