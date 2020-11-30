@@ -13,11 +13,14 @@ export class LineProcessor {
     processLine(line: string, regels: Regel[], offset: number) {
 
         // regex voor de initiële regels op te slaan
-        const regelRE = /^([0-9]{2})\s.+/;
-        if (regelRE.test(line)) {
-            const groups = line.match(regelRE);
+        const regelLocation = {
+            re: /^(\f)?([0-9]{2})\s.+/,
+            groupIndex: 2
+        }
+        if (regelLocation.re.test(line)) {
+            const groups = line.match(regelLocation.re);
             if (!groups) throw 'no group found while matching regel';
-            regels[Number(groups[1])] = new Regel(line, Number(groups[1]), offset);
+            regels[Number(groups[regelLocation.groupIndex])] = new Regel(line, Number(groups[regelLocation.groupIndex]), offset);
             return;
         }
 

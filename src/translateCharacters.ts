@@ -2,6 +2,10 @@ const conversion: CharCodeConversion[] = [
     {
         original: 213,
         replacement: '€'
+    },
+    {
+        original: 12,
+        replacement: ''
     }
 ];
 
