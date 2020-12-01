@@ -58,13 +58,13 @@ export class Regel {
 
         this.sortPosities();
 
+        const labelsOnly = this.posities.every(e => {
+            return !!e.instellingen.labelnummer;
+        });
+
         if (/\d{2}(\s|\^)*$/.test(this.regelTemplate)) {
 
-            this.posities.forEach((pos: Positie) => {
-                if (pos.instellingen.labelnummer) {
-                    this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
-                }
-            });
+            this.fillTemplateWithLabels()
 
             this.inhoud = this.regelTemplate.replace(/\b[0-9]{2}\b/, '').trim();
             this.exceptionHandled = true;
@@ -72,11 +72,7 @@ export class Regel {
         }
 
         if (/^\d{2}(\W|\^)*$/.test(this.regelTemplate)) {
-            this.posities.forEach((pos: Positie) => {
-                if (pos.instellingen.labelnummer) {
-                    this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
-                }
-            });
+            this.fillTemplateWithLabels()
 
             this.inhoud = this.regelTemplate.replace(/^\d{2}\s?/, '').trim();
             this.exceptionHandled = true;
@@ -89,7 +85,29 @@ export class Regel {
             return true;
         }
 
+        if (labelsOnly) {
+            this.fillTemplateWithLabels();
+
+            this.inhoud = this.regelTemplate.replace(/^\d{2}\s?/, '').trim();
+
+            this.posities.forEach((pos: Positie) => {
+                if (!pos.instellingen.labelnummer) throw 'no labelnummer found, this is not possible here';
+            });
+            this.exceptionHandled = true;
+
+            return true;
+        }
+
         return false;
+    }
+
+    private fillTemplateWithLabels(): void {
+        this.posities.forEach((pos: Positie) => {
+            if (pos.instellingen.labelnummer) {
+                this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
+                this.inhoud = this.inhoud.replace('^', pos.instellingen.labelnummer);
+            }
+        });
     }
 
     public setInhoudLabels(): void {
