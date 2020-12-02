@@ -115,7 +115,7 @@ files.forEach(async (file: string, i: number) => {
         processor.processLine(line, polis.regels, offset);
     }
 
-    polis.regels.forEach((r: Regel) => {
+    polis.regels.filter(r => !!r).forEach((r: Regel) => {
 
         r.sortPosities();
 

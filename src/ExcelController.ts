@@ -158,7 +158,7 @@ export class ExcelController {
 
             if (typeof omschrijving === 'undefined' || typeof inhoud === 'undefined') continue;
 
-            for (let regel of this.polis.regels) {
+            for (let regel of this.polis.regels.filter(r => !!r)) {
                 if (!regel) continue;
                 if (compareOmschrijving(omschrijving, regel.omschrijving) &&
                     compareInhoud(inhoud, regel.inhoud)) {
