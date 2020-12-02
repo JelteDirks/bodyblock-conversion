@@ -116,10 +116,16 @@ files.forEach(async (file: string, i: number) => {
     }
 
     polis.regels.forEach((r: Regel) => {
-        r.setOmschrijving();
-        r.setInhoud();
-        r.setInhoudLabels();
-        r.setTemplateLabels();
+
+        r.sortPosities();
+
+        if (!r.handleExceptions()) {
+            r.setOmschrijving();
+            r.setInhoud();
+            r.setInhoudLabels();
+            r.setTemplateLabels();
+        }
+
         r.translateCharacters();
     });
 

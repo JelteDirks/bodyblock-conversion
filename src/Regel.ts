@@ -39,7 +39,7 @@ export class Regel {
         return false;
     }
 
-    private sortPosities(): void {
+    public sortPosities(): void {
         if (this.positiesSorted) return;
 
         this.posities.sort((a: Positie, b: Positie) => {
@@ -53,7 +53,7 @@ export class Regel {
         this.positiesSorted = true;
     }
 
-    private handleExceptions(): boolean {
+    public handleExceptions(): boolean {
         if (this.exceptionHandled) return true;
 
         this.sortPosities();
@@ -111,13 +111,6 @@ export class Regel {
     }
 
     public setInhoudLabels(): void {
-
-        if (this.handleExceptions()) {
-            return;
-        }
-
-        this.sortPosities();
-
         this.posities.forEach((pos: Positie) => {
             if (!pos.instellingen.hasOwnProperty('labelnummer')) return;
             this.inhoud = this.inhoud.replace('^', <string>pos.instellingen.labelnummer);
@@ -125,13 +118,6 @@ export class Regel {
     }
 
     public setInhoud(): void {
-
-        if (this.handleExceptions()) {
-            return;
-        }
-
-        this.sortPosities();
-
         const second = this.posities[1];
 
         if (!second) {
@@ -143,13 +129,6 @@ export class Regel {
     }
 
     public setOmschrijving(): void {
-
-        if (this.handleExceptions()) {
-            return;
-        }
-
-        this.sortPosities();
-
         const first = this.posities[0]
         const second = this.posities[1];
 
@@ -167,13 +146,6 @@ export class Regel {
     }
 
     public setTemplateLabels(): void {
-
-        if (this.handleExceptions()) {
-            return;
-        }
-
-        this.sortPosities();
-
         this.posities.forEach((pos: Positie) => {
             if (pos.instellingen.labelnummer) {
                 this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
