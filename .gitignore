@@ -3,7 +3,6 @@ dist
 lib
 test/excel/new.xlsx
 ./**/*/.DS_store
-test/source
 
 
 # Logs
