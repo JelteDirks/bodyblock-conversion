@@ -39,7 +39,11 @@ export class LineProcessor {
             this.huidigePositie = Number(groups[2]);
         }
 
-        if ((this.huidigeRegel > 0) && (this.huidigePositie > 0)) {
+        if (Number(this.huidigeRegel) < 1) {
+            return;
+        } else if (typeof regels[this.huidigeRegel] === 'undefined') {
+            console.warn('regel', this.huidigeRegel, 'probably has positions for an empty line, please check line:', line);
+        } else if ((this.huidigeRegel > 0) && (this.huidigePositie > 0)) {
             regels[this.huidigeRegel].processSettings(line, this.huidigeRegel, this.huidigePositie);
         }
     }
