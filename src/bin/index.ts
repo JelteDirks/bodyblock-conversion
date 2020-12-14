@@ -65,7 +65,7 @@ if (argv.d) {
 
 files.forEach(async (file: string, i: number) => {
 
-    if (/DS_Store/.test(file)) {
+    if (/DS_Store/.test(file) || path.extname(file) === '.xlsx') {
         return;
     }
 
