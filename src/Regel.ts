@@ -1,6 +1,7 @@
 import {Positie} from "./Positie";
 import {anvaInstellingen, GroepInstellingen} from "./ANVAInstellingen";
 import {translateCharacters} from "./translateCharacters";
+import {isPrinthulpLabel} from "./isPrinthulpLabel";
 
 export class Regel {
     public regelnummer: number;
@@ -105,15 +106,15 @@ export class Regel {
         this.posities.forEach((pos: Positie) => {
             if (pos.instellingen.labelnummer) {
                 this.regelTemplate = this.regelTemplate.replace('^', pos.instellingen.labelnummer);
-                this.inhoud = this.inhoud.replace('^', pos.instellingen.labelnummer);
             }
         });
     }
 
     public setInhoudLabels(): void {
         this.posities.forEach((pos: Positie) => {
+            const isPrinthulp: boolean = isPrinthulpLabel(pos);
             if (!pos.instellingen.hasOwnProperty('labelnummer')) return;
-            this.inhoud = this.inhoud.replace('^', <string>pos.instellingen.labelnummer);
+            this.inhoud = this.inhoud.replace('^', isPrinthulp ? '' : <string>pos.instellingen.labelnummer);
         });
     }
 
