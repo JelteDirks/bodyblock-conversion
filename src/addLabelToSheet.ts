@@ -2,12 +2,14 @@ import {ExcelController} from "./ExcelController";
 import {Range} from "xlsx";
 import {Regel} from "./Regel";
 import * as xlsx from "xlsx";
+import {isPrinthulpLabel} from "./isPrinthulpLabel";
 
 const instellingenMap: { [key: string]: string } = {
     'labelnummer': 'inhoud',
     'uitlijnen': 'uitlijnen',
     'weergave': 'weergave',
-    'verwijderen': 'regel verwijderen'
+    'verwijderen': 'regel verwijderen',
+    'printhulp': 'weergave'
 }
 
 export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
@@ -39,6 +41,8 @@ export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
     for (let positie of regel.posities) {
         if (Object.keys(positie.instellingen).length <= 0) continue;
 
+        const isPrinthulp: boolean = isPrinthulpLabel(positie);
+
         r++
         hasSubInfo = false;
 
@@ -48,8 +52,15 @@ export function addLabelToSheet(this: ExcelController, regel: Regel): Range {
             if (!columntitel) throw 'no column title found for instelling ' + key;
 
             c = xlsx.utils.decode_col(this.findKeyForHeader(columntitel));
-            // @ts-ignore
-            this.setCellByAddress({r, c}, positie.instellingen[key]);
+
+            if (columntitel === 'weergave' && isPrinthulp) {
+                // @ts-ignore
+                this.setCellByAddress({r, c}, 'printhulp');
+            } else {
+                // @ts-ignore
+                this.setCellByAddress({r, c}, positie.instellingen[key]);
+            }
+
             hasSubInfo = true;
         });
 

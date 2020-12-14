@@ -79,4 +79,5 @@ export interface Instellingen extends Object {
     verwijderen?: 'niet verwijderen' | 'verwijderen';
     uitWacht?: 'Nee' | 'Ja';
     labelnummer?: string;
+    printhulp?: 'Printhulp';
 }
