@@ -40,6 +40,17 @@ export const anvaInstellingen: ANVAInstellingen[] = [
         ]
     },
     {
+        title: 'Weergave',
+        value: /^\s+Label\s*\d{5}\s*:\s*(Printhulplabel).*/,
+        groups: [
+            {
+                n: 1,
+                t: 'printhulp'
+            }
+        ]
+    },
+
+    {
         title: 'Regel verwijderen',
         value: /\s+Regel\s((niet\s)?verwijderen)\sindien\slabel\sniet\sgevuld.*/,
         groups: [
@@ -59,7 +70,7 @@ export interface ANVAInstellingen {
 
 export interface GroepInstellingen {
     n: number; // group number
-    t: 'uitlijnen' | 'weergave' | 'verwijderen' | 'uitWacht' | 'labelnummer'; // group title
+    t: 'uitlijnen' | 'weergave' | 'verwijderen' | 'uitWacht' | 'labelnummer' | 'printhulp'; // group title
 }
 
 export interface Instellingen extends Object {
