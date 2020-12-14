@@ -1,0 +1,151 @@
+Nedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   1
+
+Bouwsteen  P0X5F : POLIS/Polis/01000/01231
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort Verzekering     VvAA WIA Excedentverzekering ^                               ^^^^^
+03
+04 Verzekerden           De in loondienst van verzekeringnemer zijnde werknemer(s).
+05
+06 Eigen risicoperiode   Minimaal 728 dagen
+07                       Gerekend wordt vanaf de eerste ziektedag van de verzekerde.
+08                       Gedurende deze periode bestaat er geen recht op uitkering.
+09
+10 Ingangsdatum uitkeringDe uitkeringsperiode gaat in op de eerste dag dat de werknemer
+11                       recht heeft op een wettelijke WIA-uitkering.
+12
+13 Aanvullingspercentage Verzekerd is ^% van het inkomen tot het maximale SV-loon voor
+14                       arbeidsongeschiktheid:
+15                       Het aanvullingspercentage ^% x uitkeringspercentage x oude
+16                       gemaximeerde SV-loon
+17
+18 Indexering            ^
+19
+20 Eindleeftijd          ^
+21 Uitkeringsduur        ^
+22
+23 Premiepercentage      ^%
+24
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                                              Dikte primair: Vet
+Regel      2 Positie  52  Label 10095       : Collectiviteit
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: JaNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   2
+
+Bouwsteen  P0X5F : POLIS/Polis/01000/01231
+
+Regel      2 Positie  53  Printer instelling: Dikte primair: Medium
+Regel      2 Positie  84  Label 10020       : Bruto premie
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 33
+Regel      2 Positie  85  Label 93042       : Premie (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 15
+Regel      2 Positie  86  Label 93082       : Kosten factuur (mij + tp)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 16
+Regel      2 Positie  87  Label 93046       : Assurantiebelasting (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 17
+Regel      2 Positie  88  Label 93041       : Incassobedrag (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: JaNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   3
+
+Bouwsteen  P0X5F : POLIS/Polis/01000/01231
+
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 18
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel      7 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel      8 Positie  23  Printer instelling: Horizontale positie  6 cm
+Regel     10 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     10 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     11 Positie  23  Printer instelling: Horizontale positie  6 cm
+Regel     13 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     13 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     13 Positie  36  Label 87026       : Dekkingspercentage
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     14 Positie  23  Printer instelling: Horizontale positie  6 cm
+Regel     15 Positie  23  Printer instelling: Horizontale positie  6 cm
+Regel     15 Positie  49  Label 87026       : Dekkingspercentage
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     16 Positie  23  Printer instelling: Horizontale positie  6 cm
+Regel     18 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     18 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 87117       : Indexering WIA WGA
+                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   4
+
+Bouwsteen  P0X5F : POLIS/Polis/01000/01231
+
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     20 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     20 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 87111       : Ink. Eindleeftijd
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     21 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     21 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 87028       : Uitkeringsduur
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     23 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     23 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84937       : Premie prom bedrag A
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen 

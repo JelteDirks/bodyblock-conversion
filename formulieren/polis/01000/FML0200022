@@ -1,0 +1,118 @@
+Nedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   1
+
+Bouwsteen  P0YAH : POLIS/Polis/01000/01018
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering     Collectieve Ongevallenverzekering
+03
+04 Verzekerden           De in loondienst van verzekeringnemer zijnde werknemer(s).
+05                                                                                                   ^
+06 Verzekerde bedragen   Rubriek A  Bij overlijden             ^
+07                       Rubriek B  Bij blijvende invaliditeit ^
+08                                                                                                   ^
+09 Verzekerde bedragen   Rubriek A  Bij overlijden             Õ ^
+10                       Rubriek B  Bij blijvende invaliditeit Õ ^
+11
+12 Premiepercentage      ^%
+13
+14 Eindleeftijd          ^
+15
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+Regel      2 Positie  57  Printer instelling: Dikte primair: Medium
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      5 Positie  99  Printer instelling: Horizontale positie buiten marge
+                          Label 80717       : bedragen en risico's per persoon A.
+                                              Uitlijnen Rechts Lengte 02
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      6 Positie  61  Printer instelling: Horizontale positie 14 cmNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   2
+
+Bouwsteen  P0YAH : POLIS/Polis/01000/01018
+
+                          Label 80717       : bedragen en risico's per persoon A.
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      7 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      7 Positie  61  Printer instelling: Horizontale positie 14 cm
+                          Label 80718       : Bedragen en risico's per persoon B.
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      8 Positie  99  Printer instelling: Horizontale positie buiten marge
+                          Label 10241       : Verzekerd bedrag A
+                                              Uitlijnen Rechts Lengte 02
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      9 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      9 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      9 Positie  61  Printer instelling: Horizontale positie 14 cm
+Regel      9 Positie  63  Printer instelling: Dikte primair: Vet
+                                              Spati‰ring primair: Vast
+                          Label 10241       : Verzekerd bedrag A
+                                              Uitlijnen Rechts Lengte 16
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellenNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   3
+
+Bouwsteen  P0YAH : POLIS/Polis/01000/01018
+
+Regel      9 Positie  65  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel     10 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     10 Positie  61  Printer instelling: Horizontale positie 14 cm
+Regel     10 Positie  63  Printer instelling: Dikte primair: Vet
+                                              Spati‰ring primair: Vast
+                          Label 10242       : Verzekerd bedrag B
+                                              Uitlijnen Rechts Lengte 16
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     10 Positie  65  Printer instelling: Dikte primair: Medium
+                                              Spati‰ring primair: Proportioneel
+Regel     12 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     12 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84937       : Premie prom bedrag A
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     14 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     14 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 87028       : Uitkeringsduur
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja 

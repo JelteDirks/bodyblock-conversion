@@ -1,0 +1,274 @@
+Nedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   1
+
+Bouwsteen  P0YI3 : POLIS/Polis/02000/02510
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01 Soort verzekering     ^
+02
+03 Merk en type          ^ ^ ^
+04 Kenteken              ^
+05 Chassisnummer         ^
+06 Bouwjaar              ^
+07 Nieuwwaardetermijn    ^
+08 Gebruik               ^
+09 Beveiliging           ^
+10 Standplaats           ^
+11 Gewicht               ^
+12 No-claim              Trede ^ = ^ %
+13
+14 Eigen risico          Caravan                      ^ ^
+15                       Vrijwillig                   ^ ^
+16                       Inventaris/inboedel          ^ ^
+17                       Voortent/aanbouw             ^ ^
+18                       Overall                      ^ ^
+19
+20 Verzekerde rubrieken / artikelen ^                        Verzekerd(e) bedrag(en)     Basispremie
+
+Regel      1 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel      1 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                                              Dikte primair: Vet
+                          Label 10142       : Branche
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      2 Positie   1  Printer instelling: Dikte primair: MediumNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   2
+
+Bouwsteen  P0YI3 : POLIS/Polis/02000/02510
+
+Regel      3 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel      3 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10218       : Auto merk
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      3 Positie  25  Label 10219       : Auto model
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      3 Positie  27  Label 10220       : Auto type
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel      4 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10033       : Kenteken
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      5 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel      5 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10697       : Chassisnummer
+                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   3
+
+Bouwsteen  P0YI3 : POLIS/Polis/02000/02510
+
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      6 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel      6 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10034       : Bouwjaar
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Nee
+                                              Waarde niet optellen
+Regel      7 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Hoogte primair: 7 punten
+                                              Lettertype primair: Arial
+Regel      7 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 11 punten
+                                              Lettertype primair: CG Times
+                          Label 84290       : Nieuwwaardetermijn
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      8 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel      8 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10260       : Gebruik
+                                              Uitlijnen Links
+                                              Weergave: OmschrijvingNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   4
+
+Bouwsteen  P0YI3 : POLIS/Polis/02000/02510
+
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      9 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel      9 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 80041       : Preventie
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     10 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel     10 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10708       : Risicoadres straat
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     11 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel     11 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10038       : Gewicht
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: JaNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   5
+
+Bouwsteen  P0YI3 : POLIS/Polis/02000/02510
+
+                                              Waarde niet optellen
+Regel     12 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel     12 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+Regel     12 Positie  29  Label 10046       : B/M trede
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     12 Positie  33  Label 10050       : B/M percentage
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     14 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel     14 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+Regel     14 Positie  52  Printer instelling: Horizontale positie 10 cm
+                          Label 99994       : Euro/NLG valuta teken
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+Regel     14 Positie  54  Label 10043       : Eigen risico bedrag
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: JaNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   6
+
+Bouwsteen  P0YI3 : POLIS/Polis/02000/02510
+
+                                              Waarde niet optellen
+Regel     15 Positie  23  Printer instelling: Horizontale positie  6,5 cm
+Regel     15 Positie  52  Printer instelling: Horizontale positie 10 cm
+                          Label 99994       : Euro/NLG valuta teken
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+Regel     15 Positie  54  Label 80045       : Eigen risico bedrag 3
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     16 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+Regel     16 Positie  52  Printer instelling: Horizontale positie 10 cm
+                          Label 99994       : Euro/NLG valuta teken
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+Regel     16 Positie  54  Label 80044       : Eigen risico bedrag 2
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     17 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+Regel     17 Positie  52  Printer instelling: Horizontale positie 10 cm
+                          Label 99994       : Euro/NLG valuta teken
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 14-12-2020 Bladnr.   7
+
+Bouwsteen  P0YI3 : POLIS/Polis/02000/02510
+
+Regel     17 Positie  54  Label 80046       : Eigen risico bedrag 4
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     18 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+Regel     18 Positie  52  Printer instelling: Horizontale positie 10 cm
+                          Label 99994       : Euro/NLG valuta teken
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+Regel     18 Positie  54  Label 84295       : Eigen risico Overall
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     20 Positie   1  Printer instelling: Horizontale positie  1 cm
+                                              Lettertype primair: Arial
+                                              Hoogte primair: 7 punten
+Regel     20 Positie  34  Printer instelling: Horizontale positie  6 cm
+                                              Lettertype primair: CG Times
+                                              Hoogte primair: 11 punten
+                          Label 10001       : Maatschappij
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     20 Positie  59  Printer instelling: Horizontale positie 13 cm
+Regel     20 Positie  85  Printer instelling: Horizontale positie 20 cm 
