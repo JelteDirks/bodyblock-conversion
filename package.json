@@ -17,6 +17,7 @@
     "do-05000-pol16": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/pol16/05000/05000.xlsx -d formulieren/pol16/05000",
     "do-06000-pol16": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/pol16/06000/06000.xlsx -d formulieren/pol16/06000",
     "do-09000-pol16": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/pol16/09000/09000.xlsx -d formulieren/pol16/09000",
+    "do-01000-polis": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/polis/01000/01000.xlsx -d formulieren/polis/01000",
     "do-02000-polis": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/polis/02000/02000.xlsx -d formulieren/polis/02000",
     "debug-02000-polis": "ts-node src/bin/index.ts -i formulieren/clean.xlsx -o formulieren/polis/02000/02000.xlsx -d formulieren/polis/02000"
   },
