@@ -1,0 +1,535 @@
+Nedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   1
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering     ^
+03 Aard bedrijf          ^
+04                       ^
+05
+06 Personen loondienst   ^
+07 Tijdelijke medewerk.  ^
+08 Inleenkrachten        ^
+09 Stagiairs             ^
+10 Vrijwilligers         ^
+11 ZZP'ers               ^
+12 Personenauto's        ^
+13 Motorrijwielen        ^
+14 Bromfietsen/Scooters  ^
+15 Vrachtauto's          ^
+16 Bestelauto's          ^
+17 Werkmaterieel         ^
+18 Aant.mdw.met rijbewijs ^
+19 Aantal fte's per ^    ^
+20 Specificatie fte's    Fulltime werknemers   ^ fte's
+21                       Parttime werknemers   ^ fte's
+22                       Tijdelijke krachten   ^ fte's
+23                                                                                ^
+24 Aantal vrijwilligers/                                                          ^
+25 onbetaalden           ^
+26 Percentage regelmatige                                                         ^
+27 bestuurders           ^
+28 Basispremie op jaarbasis Basispremie per fte                        Õ ^
+29 (voorschotpremie)        Korting (^%)                               Õ ^
+30                                                                     Õ ^        ^
+31
+32                          ,^ fte's x Õ ^                              Õ ^
+33                                                                                ^
+34                          per vrijwilliger/onbetaalde                Õ ^35                                                                                ^
+36                          ^ x Õ ^                                    Õ ^
+37                                                                   ^
+38 Herberekening         Op deze verzekering is ^ van toepassing.    ^
+39
+40 Verzekerde rubrieken                              Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+                          Label 10142       : Branche
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      2 Positie  24  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80694       : Nadere omschrijving 1
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      4 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80695       : Nadere omschrijving 2
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 13901       : Aantal personen in loondienst	
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   2
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+Regel      7 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      7 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 12522       : Aantal tijdelijke medewerkers
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      8 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      8 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80782       : nnb
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      9 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      9 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 13659       : Aantal stagiairs
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     10 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     10 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 puntenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   3
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                          Label 13586       : Aantal vrijwilligers
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     11 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     11 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 13657       : Verz. aantal ZZP'ers
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     12 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     12 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 13652       : Verz. aantal personenauto's
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     13 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     13 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80783       : Verz. aantal motorrijwielen
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   4
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     14 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     14 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 13655       : Verz. Aantal bromfietsen / scooters
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     15 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     15 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 12470       : Verzekerd aantal vrachtauto's
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     16 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     16 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 13596       : Verz. aantal bussen / touringcars
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: NeeNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   5
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     17 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     17 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 81179       : Verz. aant. ongekentek. voertuigen
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     18 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     18 Positie  24  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80781       : Aantal werknemers met rijbewijs
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     19 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     19 Positie  18  Label 80321       : Ingangsdatum regeling
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD mmm EEJJ)
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     19 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84615       : Aantal fte's
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   6
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     20 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     20 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     20 Positie  45  Printer instelling: Horizontale positie 11 cm
+                          Label 80194       : Aantal medewerkers (medisch)
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     21 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     21 Positie  45  Printer instelling: Horizontale positie 11 cm
+                          Label 80195       : Aantal medewerkers (niet-medisch)
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     22 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     22 Positie  45  Printer instelling: Horizontale positie 11 cm
+                          Label 10074       : Aantal deelnemers
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: NeeNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   7
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     23 Positie  80  Printer instelling: Horizontale positie buiten marge
+                          Label 84869       : Aantal personeelsleden
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     24 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     24 Positie  80  Printer instelling: Horizontale positie buiten marge
+                          Label 84869       : Aantal personeelsleden
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     25 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     25 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84869       : Aantal personeelsleden
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     26 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     26 Positie  80  Printer instelling: Horizontale positie buiten marge
+                          Label 84616       : Percentage bestuurders
+                                              Uitlijnen LinksNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   8
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     27 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     27 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84616       : Percentage bestuurders
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     28 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     28 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     28 Positie  69  Printer instelling: Horizontale positie 11 cm
+Regel     28 Positie  71  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84231       : Premiebedrag Basisdekking
+                                              Uitlijnen Rechts Lengte 10
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     28 Positie  72  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     29 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     29 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     29 Positie  35  Label 12945       : Percentage 1
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Vervangen door: 0
+                                              Gegevens uit wachtbestand halen: JaNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   9
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     29 Positie  69  Printer instelling: Horizontale positie 11 cm
+                                              Onderstrepen enkel aan (vast)
+Regel     29 Positie  71  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84665       : Kortingsbedrag
+                                              Uitlijnen Rechts Lengte 10
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     29 Positie  72  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+                                              Onderstreping uit
+Regel     30 Positie  69  Printer instelling: Horizontale positie 11 cm
+Regel     30 Positie  71  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84248       : Premiebedrag module A
+                                              Uitlijnen Rechts Lengte 10
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     30 Positie  72  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     30 Positie  80  Printer instelling: Horizontale positie buiten marge
+                          Label 84665       : Kortingsbedrag
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.  10
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     32 Positie  27  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84615       : Aantal fte's
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     32 Positie  39  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84248       : Premiebedrag module A
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     32 Positie  40  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     32 Positie  70  Printer instelling: Horizontale positie 11 cm
+Regel     32 Positie  72  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84666       : Premiebedrag totaal
+                                              Uitlijnen Rechts Lengte 10
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: JaNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.  11
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                                              Waarde niet optellen
+Regel     32 Positie  73  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     33 Positie  80  Printer instelling: Horizontale positie buiten marge
+                          Label 84869       : Aantal personeelsleden
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     34 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     34 Positie  69  Printer instelling: Horizontale positie 11 cm
+Regel     34 Positie  71  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84232       : Premiebedrag Bagage
+                                              Uitlijnen Rechts Lengte 10
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     34 Positie  72  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     35 Positie  80  Printer instelling: Horizontale positie buiten marge
+                          Label 84869       : Aantal personeelsleden
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.  12
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+Regel     36 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84869       : Aantal personeelsleden
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     36 Positie  32  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84232       : Premiebedrag Bagage
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     36 Positie  33  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     36 Positie  69  Printer instelling: Horizontale positie 11 cm
+Regel     36 Positie  71  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 84329       : Premiebedrag Annulering
+                                              Uitlijnen Rechts Lengte 10
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     36 Positie  72  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     37 Positie  67  Printer instelling: Horizontale positie buiten margeNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.  13
+
+Bouwsteen  P0E33 : POLIS/Polis/06000/06080
+
+                          Label 80947       : Datum startbrief
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     38 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     38 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     38 Positie  46  Label 80946       : Herberekening
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     38 Positie  67  Printer instelling: Horizontale positie buiten marge
+                          Label 80947       : Datum startbrief
+                                              Uitlijnen Links
+                                              Weergave: Datum (DD-MM-EEJJ)
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel     40 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     40 Positie  34  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     40 Positie  51  Printer instelling: Horizontale positie 15,2 cm 

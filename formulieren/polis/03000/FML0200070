@@ -1,0 +1,142 @@
+Nedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   1
+
+Bouwsteen  P0E0H : POLIS/Polis/03000/03410/P357
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering        Doorlopende reis
+03 Gezinssamenstelling      ^
+04 Gezinssamenstelling      ^
+05 Dekkingsgebied           ^
+06 Verzekerde klasse        ^
+07 Bagage                   ^
+08 Geld                     ^
+09 Geneeskundige kosten     ^
+10 Ongevallen               ^
+11 Wintersport              ^
+12 Autohulp                 ^
+13 Avontuurlijke sporten    ^
+14
+15 Alarmnummer              In geval van calamiteiten kunt u contact opnemen met de alarmcentrale
+16                          onder telefoonnummer +31 ^.
+17
+18 Verzekerde rubrieken
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+Regel      2 Positie  42  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 84860       : Gezinssamenstelling
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  26  Printer instelling: Horizontale positie  6 cmNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   2
+
+Bouwsteen  P0E0H : POLIS/Polis/03000/03410/P357
+
+                                              Hoogte primair: 10 punten
+                          Label 83050       : Hoedanigheid AVP
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      5 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      5 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10246       : Dekkingsgebied (code)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 86144       : Verzekerde klasse   Goudse
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      7 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      7 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 83089       : Reisbagage (code)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      8 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      8 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 83102       : Geld en cheques (code)
+                                              Uitlijnen Links
+                                              Weergave: OmschrijvingNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   3
+
+Bouwsteen  P0E0H : POLIS/Polis/03000/03410/P357
+
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      9 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      9 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 83082       : Medische-/geneesk. kosten
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     10 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     10 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 83090       : Ongevallen (code)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     11 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     11 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 83086       : Wintersport
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     12 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     12 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 83091       : Autohulp (code)
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     13 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     13 Positie  26  Printer instelling: Horizontale positie  6 cmNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   4
+
+Bouwsteen  P0E0H : POLIS/Polis/03000/03410/P357
+
+                                              Hoogte primair: 10 punten
+                          Label 86145       : Avontuurlijke sporten
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     15 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     15 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     16 Positie  26  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     16 Positie  47  Printer instelling: Dikte primair: Vet
+Regel     16 Positie  51  Label 87024       : Alarmnummer Reis
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     16 Positie  52  Printer instelling: Dikte primair: Medium
+Regel     18 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     18 Positie  33  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten 

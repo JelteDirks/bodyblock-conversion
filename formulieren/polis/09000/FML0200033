@@ -1,0 +1,73 @@
+Nedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   1
+
+Bouwsteen  P0E3X : POLIS/Polis/09000/09060/D323
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering       ^
+03 Pluspakket              ^
+04 No-claim                Trede ^ = ^ %                                                   ^
+05
+06 Geschil                          Als u een juridisch geschil wilt melden of behoefte heeft aan juridisch advies
+07                                  kunt u contact opnemen met:
+08                                  DAS Rechtsbijstand
+09                                  T (020) - 651 75 17
+10
+11 Verzekerde rubrieken
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                                              Dikte primair: Vet
+                          Label 10142       : Branche
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      2 Positie  27  Printer instelling: Dikte primair: Medium
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 80682       : Pluspakket
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  25  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      4 Positie  31  Label 10046       : B/M tredeNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   2
+
+Bouwsteen  P0E3X : POLIS/Polis/09000/09060/D323
+
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie  35  Label 10050       : B/M percentage
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      4 Positie  89  Vaste positie
+                          Label 10047       : B/M serie
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      4 Positie  90  Vaste positie
+Regel      6 Positie   1  Printer instelling: Hoogte primair:  7 punten
+Regel      6 Positie  34  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      7 Positie  34  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      8 Positie  34  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel      9 Positie  34  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     11 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     11 Positie  34  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten 

@@ -1,0 +1,356 @@
+Nedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   1
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Soort verzekering     ^                          ^^^^^^^^^^^^
+03 Bestemming            ^
+04 Nevenactiviteit 1     ^
+05 Nevenactiviteit 2     ^
+06                       ^
+07 Risico-adres          ^ ^ ^
+08                       ^^  ^
+09 Bedrijfssector        ^
+10 Horeca aanwezig       ^
+11
+12 Uitgangspunten        - Gevaarlijke stoffen   ^ kg / ltrs
+13                       - Aantal bovengr. tanks ^
+14                       - Aantal mestsilo's     ^
+15                       - Hoeveelheid brandstof ^ m3
+16                       - Oppervlakte asbest    ^ m2
+17                       - Opslag mest           ^ m3
+18                       - Jaardoorzet brandstof ^
+19                       - Hoev.kunststof/rubber ^
+20
+21 Jaaromzet excl.BTW    Õ ^
+22 Eigen risico          Õ ^
+23
+24 Verzekerde rubrieken                              Verzekerd bedrag
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                                              Dikte primair: Vet
+                          Label 10142       : Branche
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: JaNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   2
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+Regel      2 Positie  24  Printer instelling: Dikte primair: Medium
+Regel      2 Positie  50  Label 10145       : Netto premie (=excl.kosten/ass.bel)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 33
+Regel      2 Positie  51  Label 10145       : Netto premie (=excl.kosten/ass.bel)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 75
+Regel      2 Positie  52  Label 93041       : Incassobedrag (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 34
+Regel      2 Positie  53  Label 93041       : Incassobedrag (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 22
+Regel      2 Positie  54  Label 93047       : Toeslag bedrag (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   3
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 21
+Regel      2 Positie  55  Label 93086       : Termijn toeslagbedrag (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 21
+Regel      2 Positie  56  Label 93051       : Pakketkorting (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 23
+Regel      2 Positie  57  Label 93088       : Collectiviteitstoeslag (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 21
+Regel      2 Positie  58  Label 93042       : Premie (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 24
+Regel      2 Positie  59  Label 93082       : Kosten factuur (mij + tp)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuldNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   4
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 25
+Regel      2 Positie  60  Label 93046       : Assurantiebelasting (factuur)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 26
+Regel      2 Positie  61  Label 93119       : Netto premie v¢¢r pakketkorting
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 30
+Regel      3 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      3 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 80694       : Nadere omschrijving 1
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 12529       : Nevenactiviteiten specificatie
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      5 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      5 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 81205       : Tweede nevenactivitieten spec.codeNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   5
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      6 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      6 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 80695       : Nadere omschrijving 2
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee
+Regel      7 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      7 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10708       : Risicoadres straat
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      7 Positie  25  Label 10710       : Risicoadres huisnummer
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel      7 Positie  27  Label 10711       : Risicoadres huisnr. toevoeging
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      8 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 10032       : Postcode (polis)
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: JaNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   6
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+Regel      8 Positie  24  Label 80472       : Postcode Buitenland
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      8 Positie  27  Label 10709       : Risicoadres plaats
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      9 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      9 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 12713       : Bedrijfssector, code
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     10 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     10 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+                          Label 11891       : Horeca in pand aanwezig
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel     12 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     12 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel     12 Positie  47  Printer instelling: Horizontale positie 14,5 cm
+                          Label 14044       : Gev. stoffen in lit. p. jr. in tank
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     13 Positie  23  Printer instelling: Hoogte primair: 10 puntenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   7
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+                                              Horizontale positie  6 cm
+Regel     13 Positie  47  Printer instelling: Horizontale positie 14,5 cm
+                          Label 12505       : Aantal bovengrondse tanks
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Vervangen door: 0
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     14 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel     14 Positie  47  Printer instelling: Horizontale positie 14,5 cm
+                          Label 80785       : nnb
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     15 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel     15 Positie  47  Printer instelling: Horizontale positie 14,5 cm
+                          Label 13658       : Hoev. Afg. Motorbrandstof p.j. (M3)
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     16 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel     16 Positie  47  Printer instelling: Horizontale positie 14,5 cmNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   8
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+                          Label 12506       : Oppervlakte aanwezige asbest in m2
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     17 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel     17 Positie  47  Printer instelling: Horizontale positie 14,5 cm
+                          Label 80786       : Opslag vloeibare mest in m3
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     18 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel     18 Positie  47  Printer instelling: Horizontale positie 14,5 cm
+                          Label 13658       : Hoev. Afg. Motorbrandstof p.j. (M3)
+                                              Uitlijnen Links
+                                              Weergave: Getal exclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     19 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+Regel     19 Positie  47  Printer instelling: Horizontale positie 14,5 cm
+                          Label 14043       : Hoev. kunststof en rubber in kg
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   9
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     21 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     21 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     21 Positie  25  Printer instelling: Hoogte primair: 10 punten
+                          Label 10078       : Omzet
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     22 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     22 Positie  23  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 punten
+Regel     22 Positie  25  Printer instelling: Spati‰ring primair: Vast
+                                              Dikte primair: Vet
+                          Label 10043       : Eigen risico bedrag
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Vervangen door: 0,00
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde niet optellen
+Regel     22 Positie  26  Printer instelling: Spati‰ring primair: Proportioneel
+                                              Dikte primair: Medium
+Regel     24 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel     24 Positie  33  Printer instelling: Horizontale positie  6 cm
+                                              Hoogte primair: 10 puntenNedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.  10
+
+Bouwsteen  P0YMA : POLIS/Polis/05000/05691/P311
+
+Regel     24 Positie  51  Printer instelling: Horizontale positie 15,2 cm 

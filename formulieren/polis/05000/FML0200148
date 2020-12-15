@@ -1,0 +1,32 @@
+Nedasco B.V.                                                                                          Datum 15-12-2020 Bladnr.   1
+
+Bouwsteen  P0KA3 : POLIS/Polis/05000/05888/P375
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01
+02 Rubriek               Milieuschade (L)
+03
+04 Gebruik               ^
+05                       ^
+06
+
+Regel      2 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      2 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                                              Dikte primair: Vet
+Regel      2 Positie  39  Printer instelling: Dikte primair: Medium
+Regel      4 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      4 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 80694       : Nadere omschrijving 1
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      5 Positie   1  Printer instelling: Hoogte primair: 7 punten
+Regel      5 Positie  23  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie  6 cm
+                          Label 80695       : Nadere omschrijving 2
+                                              Uitlijnen Links
+                                              Regel verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Nee 
