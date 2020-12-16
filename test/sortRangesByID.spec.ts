@@ -42,4 +42,36 @@ describe('sort ranges', () => {
         ])
     });
 
+    test('switch ranges', () => {
+        const originalRanges: RangeID[] = [
+            {
+                id: 'b',
+                range: {s: {r: 1, c: 0}, e: {r: 2, c: 6}}
+            },
+
+            {
+                id: 'c',
+                range: {s: {r: 6, c: 0}, e: {r: 7, c: 6}}
+            },
+            {
+                id: 'a',
+                range: {s: {r: 3, c: 0}, e: {r: 5, c: 6}}
+            }
+        ];
+
+        expect(sortRangesByID(originalRanges)).toStrictEqual([
+            {
+                id: 'a',
+                range: {s: {r: 1, c: 0}, e: {r: 3, c: 6}}
+            },
+            {
+                id: 'b',
+                range: {s: {r: 4, c: 0}, e: {r: 5, c: 6}}
+            },
+            {
+                id: 'c',
+                range: {s: {r: 6, c: 0}, e: {r: 7, c: 6}}
+            }
+        ]);
+    });
 });
