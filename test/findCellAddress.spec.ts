@@ -35,6 +35,4 @@ describe('finding cell addresses by string content', () => {
             .toStrictEqual(['I1']);
     });
 
-
-
 });
