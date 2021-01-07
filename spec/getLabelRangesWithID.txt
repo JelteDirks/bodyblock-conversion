@@ -1,0 +1,15 @@
+use relative position to upper left cell {r, c} for ID: relativeIDPosition
+use arbitrary sheet object: sheetObj
+use arbitrary column (A, B, C...): identifyingColumn
+
+PROCEDURE(sheetObj, identifyingColumn, relativeIDPosition):
+  r <- 0
+  ranges <- list()
+
+  while (r <= sheet[!ref].end.row)
+    range <- identifyLabelRange(sheetObj, r, identifyingColumn)
+    id <- sheet.findAddress(range.start.row + relativeIDPosition.row, range.start.column + relativeIDPosition.column)
+    ranges.append({range, id})
+    r <- range.end.row + 1
+
+  return ranges
