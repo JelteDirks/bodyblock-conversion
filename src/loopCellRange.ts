@@ -1,4 +1,3 @@
-import * as xlsx from "xlsx";
 import {CellAddress, Range} from "xlsx";
 
 export function loopCellRange(range: Range, cb: (cellAddress: CellAddress) => any, _this: any = null) {
