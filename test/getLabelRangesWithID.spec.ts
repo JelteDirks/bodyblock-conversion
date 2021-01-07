@@ -11,12 +11,12 @@ describe('get ranges with id from excel file', () => {
 
     beforeAll(() => {
         sheetObj = require('./static/dummysheet.json');
-        ranges = getLabelRangesWithID(sheetObj, 'A', {r: 0, c: 0});
+        ranges = getLabelRangesWithID(sheetObj, 'A', {r: 0, c: 0}, 1);
     });
 
     test('first range', () => {
-        expect(ranges[1].range)
+        expect(ranges[0].range)
             .toStrictEqual(xlsx.utils.decode_range('A2:I3'));
-        expect(ranges[1].id).toBe('Soort verzekering');
+        expect(ranges[0].id).toBe('Soort verzekering');
     });
 });

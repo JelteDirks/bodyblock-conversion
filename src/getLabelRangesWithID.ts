@@ -6,8 +6,9 @@ const xlsx = require('xlsx');
 
 export function getLabelRangesWithID(sheetObj: Sheet,
                                      identifyingColumn: string,
-                                     relativeIDAddress: CellAddress): RangeID[] {
-    let r = 0;
+                                     relativeIDAddress: CellAddress,
+                                     startRow: number = 0): RangeID[] {
+    let r = startRow;
     const ranges: RangeID[] = [];
 
     while (r <= xlsx.utils.decode_range(sheetObj["!ref"]).e.r) {
