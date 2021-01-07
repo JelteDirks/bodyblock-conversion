@@ -1,5 +1,4 @@
 import {CellAddress, CellObject, Range, Sheet} from "xlsx";
-import {findCellAddress} from "./findCellAddress";
 import {cellInRange} from "./cellInRange";
 
 const xlsx = require('xlsx');
@@ -11,8 +10,7 @@ export function identifyLabelRange(sheetObj: Sheet, startRow: number, columnForS
     let r: number = startRow;
     let value: string | undefined = '';
 
-    const initialCellAddress: CellAddress = {r, c};
-    const initialCellObject: CellObject = sheetObj[xlsx.utils.encode_cell(initialCellAddress)];
+    const initialCellObject: CellObject = sheetObj[xlsx.utils.encode_cell({r, c})];
     const initialValue = initialCellObject.w;
     const maxColumn: number = xlsx.utils.decode_range(sheetObj["!ref"]).e.c;
     const minColumn: number = xlsx.utils.decode_range(sheetObj["!ref"]).s.c;
