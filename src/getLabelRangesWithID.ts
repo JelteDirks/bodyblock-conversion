@@ -12,12 +12,12 @@ export function getLabelRangesWithID(sheetObj: Sheet,
     const ranges: RangeID[] = [];
 
     while (r <= xlsx.utils.decode_range(sheetObj["!ref"]).e.r) {
-        let range = identifyLabelRange(sheetObj, r, 'A');
+        let range = identifyLabelRange(sheetObj, r, identifyingColumn);
         let rID = range.s.r + relativeIDAddress.r;
         let cID = range.s.c + relativeIDAddress.c;
         let cellID: CellObject = sheetObj[xlsx.utils.encode_cell({r: rID, c: cID})];
-        let valueID = cellID.v;
-        ranges.push({id: String(valueID), range})
+        let valueID = cellID?.v;
+        ranges.push({id: String(valueID || ''), range});
         r = range.e.r + 1;
     }
 

@@ -4,13 +4,16 @@ import {getLabelRangesWithID} from "../src/getLabelRangesWithID";
 
 const xlsx = require('xlsx');
 
-describe('get ranges with id from excel file', () => {
+let sheetObj: Sheet;
+let ranges: RangeID[];
 
-    let sheetObj: Sheet;
-    let ranges: RangeID[];
+beforeAll(() => {
+    sheetObj = require('./static/dummysheet.json');
+});
+
+describe('omschrijving as identifying column', () => {
 
     beforeAll(() => {
-        sheetObj = require('./static/dummysheet.json');
         ranges = getLabelRangesWithID(sheetObj, 'A', {r: 0, c: 0}, 1);
     });
 
@@ -46,5 +49,24 @@ describe('get ranges with id from excel file', () => {
 
     test('range list borders', () => {
         expect(ranges.length).toBe(18);
+    });
+});
+
+describe('weergave as identifying column no start row', () => {
+
+    beforeAll(() => {
+        ranges = getLabelRangesWithID(sheetObj, 'C', {r: 0, c: 5});
+    });
+
+    test('first range', () => {
+        expect(ranges[0].range)
+            .toStrictEqual(xlsx.utils.decode_range('A1:I2'));
+        expect(ranges[0].id).toBe('regel template');
+    });
+
+    test('long range', () => {
+        expect(ranges[1].range)
+            .toStrictEqual(xlsx.utils.decode_range('A3:I13'));
+        expect(ranges[1].id).toBe('');
     });
 });
