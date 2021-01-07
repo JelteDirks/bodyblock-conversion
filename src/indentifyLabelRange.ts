@@ -3,7 +3,7 @@ import {cellInRange} from "./cellInRange";
 
 const xlsx = require('xlsx');
 
-export function identifyLabelRange(sheetObj: Sheet, startRow: number, columnForSorting: string): Range | undefined {
+export function identifyLabelRange(sheetObj: Sheet, startRow: number, columnForSorting: string): Range {
 
     const c: number = xlsx.utils.decode_col(columnForSorting);
 

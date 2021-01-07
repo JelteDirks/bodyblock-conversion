@@ -8,6 +8,7 @@ import {loopCellRange} from "./loopCellRange";
 import {addLabelToSheet} from "./addLabelToSheet";
 import {compareOmschrijving} from "./compareOmschrijving";
 import {sortByColumn} from "./sortByColumn";
+import {identifyLabelRange} from "./indentifyLabelRange";
 
 const xlsx = require('xlsx');
 
@@ -162,7 +163,7 @@ export class ExcelController {
                 if (!regel) continue;
                 if (compareOmschrijving(omschrijving, regel.omschrijving) &&
                     compareInhoud(inhoud, regel.inhoud)) {
-                    const labelRange = this.identifyLabelRange(r);
+                    const labelRange = identifyLabelRange(this.getSheet(), r, 'A');
                     labelRange.s.c = this.maatschappijColumn;
                     labelRange.e.c = this.maatschappijColumn;
                     loopCellRange(labelRange, ((cellAddress: CellAddress) => {
