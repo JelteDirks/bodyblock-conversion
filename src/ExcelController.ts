@@ -10,6 +10,7 @@ import {compareOmschrijving} from "./compareOmschrijving";
 import {sortByColumn} from "./sortByColumn";
 import {identifyLabelRange} from "./indentifyLabelRange";
 import {setRefByContent} from "./setRefByContent";
+import {sortBoy} from "./sortBoy";
 
 const xlsx = require('xlsx');
 
@@ -83,6 +84,10 @@ export class ExcelController {
 
     getSheet(): WorkSheet {
         return this.workbook.Sheets[this.polis.branche]
+    }
+
+    setSheet(workSheet: WorkSheet) {
+        this.workbook.Sheets[this.polis.branche] = workSheet;
     }
 
     setMaatschappijColumn(): void {
@@ -204,7 +209,8 @@ export class ExcelController {
     }
 
     public save(dest: string): void {
-        sortByColumn.call(this, this.getSheet(), 'regel template');
+        const sorted = sortBoy(this.getSheet(), 'F', {r: 0, c: 5}, 1);
+        this.setSheet(sorted);
         this.setRefByContent();
         xlsx.writeFile(this.workbook, path.resolve(dest));
     }

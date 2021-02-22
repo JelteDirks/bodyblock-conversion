@@ -11,8 +11,8 @@ export function sortBoy(sheetObj: Sheet,
                         startRow: number): Sheet {
 
     const rangesWithID: RangeID[] = getLabelRangesWithID(sheetObj, columnForRange, addressForSorting, startRow);
-    const sortedRangesWithID: RangeID[] = sortRangesByID(rangesWithID);
-    const rangeconversions: RangeConversion[] = createRangeConversion(rangesWithID, sortedRangesWithID);
+    const {sorted, original} = <{ original: RangeID[], sorted: RangeID[] }>sortRangesByID(rangesWithID);
+    const rangeconversions: RangeConversion[] = createRangeConversion(original, sorted);
     const converted: Sheet = moveRangesInSheet(sheetObj, rangeconversions);
 
     return converted;

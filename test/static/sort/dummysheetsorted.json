@@ -1,0 +1,273 @@
+{
+  "!ref": "A1:I5",
+  "A1": {
+    "t": "s",
+    "v": "omschrijving",
+    "h": "omschrijving",
+    "w": "omschrijving"
+  },
+  "B1": {
+    "t": "s",
+    "v": "inhoud",
+    "h": "inhoud",
+    "w": "inhoud"
+  },
+  "C1": {
+    "t": "s",
+    "v": "weergave",
+    "h": "weergave",
+    "w": "weergave"
+  },
+  "D1": {
+    "t": "s",
+    "v": "uitlijnen",
+    "h": "uitlijnen",
+    "w": "uitlijnen"
+  },
+  "E1": {
+    "t": "s",
+    "v": "regel verwijderen",
+    "h": "regel verwijderen",
+    "w": "regel verwijderen"
+  },
+  "F1": {
+    "t": "s",
+    "v": "regel template",
+    "h": "regel template",
+    "w": "regel template"
+  },
+  "G1": {
+    "t": "s",
+    "v": "P300",
+    "h": "P300",
+    "w": "P300"
+  },
+  "H1": {
+    "t": "s",
+    "v": "P346",
+    "h": "P346",
+    "w": "P346"
+  },
+  "I1": {
+    "t": "s",
+    "v": "P382",
+    "h": "P382",
+    "w": "P382"
+  },
+  "A2": {
+    "t": "s",
+    "v": "Verzekerd object",
+    "h": "Verzekerd object",
+    "w": "Verzekerd object"
+  },
+  "B2": {
+    "t": "s",
+    "v": "80110",
+    "h": "80110",
+    "w": "80110"
+  },
+  "C2": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "D2": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "E2": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "F2": {
+    "t": "s",
+    "v": "02 Verzekerd object      80110",
+    "h": "02 Verzekerd object      80110",
+    "w": "02 Verzekerd object      80110"
+  },
+  "G2": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "H2": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "I2": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "A3": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "B3": {
+    "t": "s",
+    "v": "80110",
+    "h": "80110",
+    "w": "80110"
+  },
+  "C3": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "D3": {
+    "t": "s",
+    "v": "Links",
+    "h": "Links",
+    "w": "Links"
+  },
+  "E3": {
+    "t": "s",
+    "v": "niet verwijderen",
+    "h": "niet verwijderen",
+    "w": "niet verwijderen"
+  },
+  "F3": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "G3": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "H3": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "I3": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "A4": {
+    "t": "s",
+    "v": "Soort verzekering",
+    "h": "Soort verzekering",
+    "w": "Soort verzekering"
+  },
+  "B4": {
+    "t": "s",
+    "v": "10142",
+    "h": "10142",
+    "w": "10142"
+  },
+  "C4": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "D4": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "E4": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "F4": {
+    "t": "s",
+    "v": "03 Soort verzekering     10142",
+    "h": "03 Soort verzekering     10142",
+    "w": "03 Soort verzekering     10142"
+  },
+  "G4": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "H4": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "I4": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "A5": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "B5": {
+    "t": "s",
+    "v": "10142",
+    "h": "10142",
+    "w": "10142"
+  },
+  "C5": {
+    "t": "s",
+    "v": "Omschrijving",
+    "h": "Omschrijving",
+    "w": "Omschrijving"
+  },
+  "D5": {
+    "t": "s",
+    "v": "Links",
+    "h": "Links",
+    "w": "Links"
+  },
+  "E5": {
+    "t": "s",
+    "v": "niet verwijderen",
+    "h": "niet verwijderen",
+    "w": "niet verwijderen"
+  },
+  "F5": {
+    "t": "s",
+    "v": "",
+    "h": "",
+    "w": ""
+  },
+  "G5": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "H5": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  },
+  "I5": {
+    "t": "s",
+    "v": "x",
+    "h": "x",
+    "w": "x"
+  }
+}

@@ -1,5 +1,7 @@
 import {Range} from "xlsx";
 
+import {cloneDeep} from "lodash";
+
 export interface RangeID {
     range: Range;
     id: string;
@@ -7,8 +9,8 @@ export interface RangeID {
 
 export function sortRangesByID(rangeList: RangeID[]): { sorted: RangeID[], original: RangeID[] } {
 
-    const original = [...rangeList];
-    const sorted = [...rangeList]
+    const original = cloneDeep(rangeList);
+    const sorted = cloneDeep(rangeList)
 
     sorted.sort((a: RangeID, b: RangeID) => {
         return a.id.localeCompare(b.id);
@@ -16,12 +18,11 @@ export function sortRangesByID(rangeList: RangeID[]): { sorted: RangeID[], origi
 
     let r_current = 1;
 
-    for (let rangeID of sorted) {
-        const {range} = rangeID;
-        const increment = range.e.r - range.s.r;
+    for (let i = 0; i < sorted.length; ++i) {
+        const increment = sorted[i].range.e.r - sorted[i].range.s.r;
 
-        range.s.r = r_current;
-        range.e.r = r_current + increment;
+        sorted[i].range.s.r = r_current;
+        sorted[i].range.e.r = r_current + increment;
 
         r_current = r_current + increment + 1;
     }

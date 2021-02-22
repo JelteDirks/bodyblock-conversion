@@ -1,26 +1,23 @@
 import {RangeID} from "./sortRangesByID";
 import {RangeConversion} from "./types";
 
-export function createRangeConversion(originalRangesOrder: RangeID[], sortedRangesOrder: RangeID[]): RangeConversion[] {
+export function createRangeConversion(originalRangesOrder: RangeID[], sortedRangesOrder: (RangeID | null)[]): RangeConversion[] {
 
     const result: RangeConversion[] = [];
 
     for (let i = 0; i < originalRangesOrder.length; ++i) {
-
-        let ogID = originalRangesOrder[i].id;
-
         for (let j = 0; j < sortedRangesOrder.length; ++j) {
-            if (!sortedRangesOrder[j]) continue;
+            if (sortedRangesOrder[j] === null) continue;
 
-            let soID = sortedRangesOrder[j].id;
+            let obj = <RangeID>sortedRangesOrder[j];
 
-            if (ogID === soID) {
+            if (originalRangesOrder[i].id === obj.id) {
                 result.push({
                     originalRange: originalRangesOrder[i].range,
-                    newRange: sortedRangesOrder[j].range
+                    newRange: obj.range
                 });
 
-                delete sortedRangesOrder[j];
+                sortedRangesOrder[j] = null;
                 break;
             }
         }
