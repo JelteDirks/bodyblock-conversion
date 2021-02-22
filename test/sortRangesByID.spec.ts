@@ -1,77 +1,45 @@
 import {RangeID, sortRangesByID} from "../src/sortRangesByID";
 
-describe('sort ranges', () => {
+describe('sorting ranges by their ID', () => {
 
-    test('single range', () => {
-        const originalRanges = [
+    test('regular range', () => {
+        const original: RangeID[] = [
             {
-                id: 'only',
-                range: {s: {r: 1, c: 0}, e: {r: 2, c: 6}}
+                id: '03 Soort verzekering',
+                range: {
+                    s: {r: 1, c: 0},
+                    e: {r: 2, c: 8}
+                }
+            },
+            {
+                id: '02 Verzekerd Object',
+                range: {
+                    s: {r: 3, c: 0},
+                    e: {r: 4, c: 8}
+                }
             }
         ];
 
-        expect(sortRangesByID(originalRanges)).toStrictEqual([
+        const sorted: RangeID[] = [
             {
-                id: 'only',
-                range: {s: {r: 1, c: 0}, e: {r: 2, c: 6}}
-            }
-        ]);
-    });
-
-    test('flip ranges', () => {
-        const originalRanges: RangeID[] = [
-            {
-                id: 'b',
-                range: {s: {r: 1, c: 0}, e: {r: 2, c: 6}}
+                id: '02 Verzekerd Object',
+                range: {
+                    s: {r: 1, c: 0},
+                    e: {r: 2, c: 8}
+                }
             },
             {
-                id: 'a',
-                range: {s: {r: 3, c: 0}, e: {r: 4, c: 6}}
+                id: '03 Soort verzekering',
+                range: {
+                    s: {r: 3, c: 0},
+                    e: {r: 4, c: 8}
+                }
             }
         ];
 
-        expect(sortRangesByID(originalRanges)).toStrictEqual([
-            {
-                id: 'a',
-                range: {s: {r: 1, c: 0}, e: {r: 2, c: 6}}
-            },
-            {
-                id: 'b',
-                range: {s: {r: 3, c: 0}, e: {r: 4, c: 6}}
-            }
-        ])
-    });
+        const {sorted: actualSorted, original: actualOriginal} = sortRangesByID(original);
 
-    test('switch ranges', () => {
-        const originalRanges: RangeID[] = [
-            {
-                id: 'b',
-                range: {s: {r: 1, c: 0}, e: {r: 2, c: 6}}
-            },
-
-            {
-                id: 'c',
-                range: {s: {r: 6, c: 0}, e: {r: 7, c: 6}}
-            },
-            {
-                id: 'a',
-                range: {s: {r: 3, c: 0}, e: {r: 5, c: 6}}
-            }
-        ];
-
-        expect(sortRangesByID(originalRanges)).toStrictEqual([
-            {
-                id: 'a',
-                range: {s: {r: 1, c: 0}, e: {r: 3, c: 6}}
-            },
-            {
-                id: 'b',
-                range: {s: {r: 4, c: 0}, e: {r: 5, c: 6}}
-            },
-            {
-                id: 'c',
-                range: {s: {r: 6, c: 0}, e: {r: 7, c: 6}}
-            }
-        ]);
+        expect(JSON.stringify({sorted: actualSorted, original: actualOriginal}, null, 2))
+            .toBe(JSON.stringify({sorted, original}, null, 2));
     });
 });
