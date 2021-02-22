@@ -5,7 +5,7 @@ export interface RangeID {
     id: string;
 }
 
-export function sortRangesByID(rangeList: RangeID[]) {
+export function sortRangesByID(rangeList: RangeID[]): RangeID[] {
 
     const sorted = rangeList.sort((a: RangeID, b: RangeID) => {
         return a.id.localeCompare(b.id);
