@@ -1,0 +1,28 @@
+Nedasco B.V.                                                                                          Datum 22-02-2021 Bladnr.   1
+
+Bouwsteen  P0HUK : PAKBD/Polis/99000/99600/X603
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01 Serviceabonnement ^    Õ ^
+
+Regel      1 Positie   1  Printer instelling: Hoogte primair: 10 punten
+Regel      1 Positie  19  Label 84687       : Omschrijving serviceabonnement
+                                              Uitlijnen Links
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      1 Positie  24  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie 19 cm
+Regel      1 Positie  26  Printer instelling: Spati‰ring primair: Vast
+                          Label 10145       : Netto premie (=excl.kosten/ass.bel)
+                                              Uitlijnen Rechts Lengte 12
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Vervangen door: 0,00
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen
+                                              Resultaat veld: 30
+Regel      1 Positie  27  Printer instelling: Spati‰ring primair: Proportioneel
+Regel      1 Positie  28  Printer instelling: Hoogte primair: 10 punten 

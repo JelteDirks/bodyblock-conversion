@@ -1,0 +1,65 @@
+Nedasco B.V.                                                                                          Datum 22-02-2021 Bladnr.   1
+
+Bouwsteen  P0YD1 : PAKBD/Polis/09000/09020/P386
+
+            1         2         3         4         5         6         7         8         9        10        11        12        13
+   123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+01 ^ ^^   A.S.R. Schadeverzekering N.V. ^^  Õ ^
+
+Regel      1 Positie   1  Printer instelling: Hoogte primair: 10 punten
+                          Label 10142       : Branche
+                                              Uitlijnen Links
+                                              Weergave: Omschrijving
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+Regel      1 Positie   3  Label 10145       : Netto premie (=excl.kosten/ass.bel)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 30
+Regel      1 Positie   4  Label 10119       : Retourprovisie
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 30
+Regel      1 Positie   8  Printer instelling: Horizontale positie 10 cm
+Regel      1 Positie  38  Label 10145       : Netto premie (=excl.kosten/ass.bel)
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: JaNedasco B.V.                                                                                          Datum 22-02-2021 Bladnr.   2
+
+Bouwsteen  P0YD1 : PAKBD/Polis/09000/09020/P386
+
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 01
+Regel      1 Positie  39  Label 10119       : Retourprovisie
+                                              Uitlijnen Links
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Gegevens uit wachtbestand halen: Ja
+                                              Omrekenen op jaarbasis: Nee
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Waarde optellen niet printen
+                                              Resultaat veld: 01
+Regel      1 Positie  42  Printer instelling: Hoogte primair: 10 punten
+                                              Horizontale positie 19 cm
+Regel      1 Positie  44  Printer instelling: Spati‰ring primair: Vast
+                          Label             : Resultaat veld 01
+                                              Uitlijnen Rechts Lengte 12
+                                              Weergave: Getal inclusief decimalen
+                                              Regel niet verwijderen indien label niet gevuld
+                                              Negatief het "-" teken afdrukken: Ja
+                                              Na afdruk op nul stellen: Ja
+Regel      1 Positie  45  Printer instelling: Spati‰ring primair: Proportioneel
+Regel      1 Positie  46  Printer instelling: Hoogte primair: 10 punten 
