@@ -209,9 +209,9 @@ export class ExcelController {
     }
 
     public save(dest: string): void {
+        this.setRefByContent();
         const sorted = sortBoy(this.getSheet(), 'F', {r: 0, c: 5}, 1);
         this.setSheet(sorted);
-        this.setRefByContent();
         xlsx.writeFile(this.workbook, path.resolve(dest));
     }
 }
