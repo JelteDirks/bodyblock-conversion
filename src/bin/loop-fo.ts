@@ -4,6 +4,7 @@ import {Sheet, WorkBook} from "xlsx";
 import {RangeID} from "../sortRangesByID";
 import {getLabelRangesWithID} from "../getLabelRangesWithID";
 import {labelRangeToObj} from "../labelRangeToObj";
+import * as fs from "fs";
 
 const xlsx = require('xlsx');
 
@@ -21,10 +22,12 @@ if (path.extname(argv.f) !== '.xlsx') {
 
 const workbook: WorkBook = xlsx.readFile(argv.f);
 const sheetNames: string[] = workbook.SheetNames;
-const collection: { [key: string]: any }[] = [];
 
 // loop all sheets in the workbook
 for (let i = 0; i < sheetNames.length; ++i) {
+
+    // create a collection for every sheet
+    let collection: { [key: string]: any }[] = [];
 
     // if the sheet name is not 5 numbers, ignore it
     if (!/\d{5}/.test(sheetNames[i])) continue;
@@ -40,6 +43,12 @@ for (let i = 0; i < sheetNames.length; ++i) {
         let obj = labelRangeToObj(labelRanges[j], sheet);
         collection.push(obj);
     }
+
+    const json = JSON.stringify(collection, null, 2);
+
+    fs.writeFileSync(path.resolve('./tmp/', sheetNames[i]) + '.json', json, {
+        encoding: "utf8",
+        flag: 'w+'
+    });
 }
 
-console.log(JSON.stringify(collection, null, 2));
