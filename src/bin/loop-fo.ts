@@ -1,6 +1,9 @@
 import yargs from "yargs";
 import path from "path";
-import {WorkBook} from "xlsx";
+import {Sheet, WorkBook} from "xlsx";
+import {RangeID} from "../sortRangesByID";
+import {getLabelRangesWithID} from "../getLabelRangesWithID";
+import {labelRangeToObj} from "../labelRangeToObj";
 
 const xlsx = require('xlsx');
 
@@ -19,11 +22,21 @@ if (path.extname(argv.f) !== '.xlsx') {
 const workbook: WorkBook = xlsx.readFile(argv.f);
 const sheetNames: string[] = workbook.SheetNames;
 
+// loop all sheets in the workbook
 for (let i = 0; i < sheetNames.length; ++i) {
 
     // if the sheet name is not 5 numbers, ignore it
     if (!/\d{5}/.test(sheetNames[i])) continue;
 
+    // retrieve the current sheet
+    let sheet: Sheet = workbook.Sheets[sheetNames[i]];
 
-    console.log(sheetNames[i]);
+    // get labels that are on this sheet
+    let labelRanges: RangeID[] = getLabelRangesWithID(sheet, 'F', {r: 0, c: 0}, 1);
+
+    // process every individual label
+    for (let j = 0; j < labelRanges.length; ++j) {
+        let obj = labelRangeToObj(labelRanges[j], sheet);
+        console.log(obj);
+    }
 }
