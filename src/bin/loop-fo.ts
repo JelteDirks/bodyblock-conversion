@@ -21,6 +21,7 @@ if (path.extname(argv.f) !== '.xlsx') {
 
 const workbook: WorkBook = xlsx.readFile(argv.f);
 const sheetNames: string[] = workbook.SheetNames;
+const collection: { [key: string]: any }[] = [];
 
 // loop all sheets in the workbook
 for (let i = 0; i < sheetNames.length; ++i) {
@@ -37,6 +38,8 @@ for (let i = 0; i < sheetNames.length; ++i) {
     // process every individual label
     for (let j = 0; j < labelRanges.length; ++j) {
         let obj = labelRangeToObj(labelRanges[j], sheet);
-        console.log(obj);
+        collection.push(obj);
     }
 }
+
+console.log(JSON.stringify(collection, null, 2));
