@@ -15,6 +15,8 @@ describe('finding cell addresses by string content', () => {
             .toStrictEqual(['A1']);
     });
 
+
+
     test('find title with range', () => {
         expect(findCellAddress(sheetObject, 'omschrijving', xlsx.utils.decode_range('A1:A7')))
             .toStrictEqual(['A1']);

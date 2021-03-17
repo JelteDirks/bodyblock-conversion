@@ -4,6 +4,7 @@ import {Sheet} from "xlsx";
 import {setInhoud} from "./objectsetters/setInhoud";
 import {setMaatschappijen} from "./objectsetters/setMaatschappijen";
 import {setCheckLabels} from "./objectsetters/setCheckLabels";
+import {setType} from "./objectsetters/setType";
 
 const xlsx = require('xlsx');
 
@@ -17,6 +18,8 @@ export function labelRangeToObj(r: RangeID, sheet: Sheet): { [key: string]: any 
     obj = setInhoud(r, sheet, obj);
     obj = setMaatschappijen(r, sheet, obj, companyColumnInt);
     obj = setCheckLabels(r, sheet, obj);
+    obj = setType(r, sheet, obj);
+
 
     return obj;
 }
