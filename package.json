@@ -14,7 +14,9 @@
     "fo-pol16-1000": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/pol16/01000/pol16.01000.xlsx -d formulieren/pol16/01000",
     "fo-to-json-pol16-1000": "npm run compile && node lib/src/bin/fo-to-json.js -f formulieren/pol16/01000/pol16.01000.xlsx",
     "fo-pol16-2000": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/pol16/02000/pol16.02000.xlsx -d formulieren/pol16/02000",
-    "fo-to-json-pol16-2000": "npm run compile && node lib/src/bin/fo-to-json.js -f formulieren/pol16/02000/pol16.02000.xlsx"
+    "fo-to-json-pol16-2000": "npm run compile && node lib/src/bin/fo-to-json.js -f formulieren/pol16/02000/pol16.02000.xlsx",
+    "fo-pol16-3000": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o formulieren/pol16/03000/pol16.03000.xlsx -d formulieren/pol16/03000",
+    "fo-to-json-pol16-3000": "npm run compile && node lib/src/bin/fo-to-json.js -f formulieren/pol16/03000/pol16.03000.xlsx"
   },
   "bin": {
     "convert-bodyblock": "lib/src/bin/index.js"
