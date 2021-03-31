@@ -22,7 +22,7 @@
     "do-03000-polis": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o dist/polis/03000.xlsx -d formulieren/polis/03000",
     "do-polbe": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o dist/polbe/polbe.xlsx -d formulieren/polbe",
     "do-pakbd": "npm run compile && node lib/src/bin/index.js -i formulieren/clean.xlsx -o dist/pakbd/pakbd.xlsx -d formulieren/pakbd",
-    "debug-loop-fo": "npm run compile && node lib/src/bin/loop-fo.js -f formulieren/polis/02000/02000.xlsx"
+    "debug-loop-fo": "npm run compile && node lib/src/bin/loop-fo.js -f formulieren/polis/03000/03000.xlsx"
   },
   "bin": {
     "convert-bodyblock": "lib/src/bin/index.js"

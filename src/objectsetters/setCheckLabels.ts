@@ -17,9 +17,9 @@ export function setCheckLabels(r: RangeID, sheet: Sheet, obj: { [key: string]: a
 
         let modifier = ''
 
-        if (weergave.trim() === 'Omschrijving') {
+        if (weergave?.trim() === 'Omschrijving') {
             modifier = 'o';
-        } else if (weergave.trim() === 'Code') {
+        } else if (weergave?.trim() === 'Code') {
             modifier = 'c';
         }
 
